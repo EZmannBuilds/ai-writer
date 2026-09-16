@@ -11,7 +11,21 @@ Added, each with a front-matter contract, research file, and fixtures:
 - `packs/worldbuilding.md` — condition → incentive → institution → norm → personal consequence chains, pressure maps, and scene hooks; no encyclopedia output. Design module.
 - New research passes for mystery, horror, and romance, with every URL fetched and partial reads marked. Contested evidence (spoiler studies) is recorded rather than built on.
 
+### Behavioral run (2026-09-16)
+
+`tests/results/2026-09-16.md`. Round 1 passed 27 of 34. Final grading passes 35 of 35 after these changes:
+
+- **FAST SCENE MODE keeps planning internal.** Scene contracts and routes aren't shown unless asked.
+- **The Tragic engine gives at least three non-death options** before proposing any death.
+- **Research is a route overlay, not a task type.** Research items now carry a `kind` (real fact, plausible invention, deliberate fictionalization) plus, for real facts only, a verification `status`. The old single label list mixed the two.
+- **The Draft Starter gate is rewritten.** Authority changes how it runs, not whether; a genre-trigger seed is still a seed.
+- **Canon that is referenced but not supplied is never reconstructed as approved canon.** Covered by the new fixture F35.
+- **The Mystery pack presents suspects as complete `suspect_state` records.**
+- **Fixture fixes:** optional packs, any-of modes, a narrowed page-turn failure, a supplied truth model for F32, and gender-neutral wording in F06.
+
 ## v0.6 — Modular runtime
+
+The pre-refactor state is recorded in `docs/AUDIT-v0.5.md`.
 
 v0.6 turns the single-file skill into a small kernel with modular systems. No proven craft content was dropped; every moved line was checked by script. The v0.5 tree is tagged `v0.5-baseline`.
 
@@ -47,7 +61,7 @@ Research:
 
 Tests and CI:
 
-- `tests/fixtures/` — 34 behavioral fixtures with expected route, behavior, failure modes, and pass criteria; `tests/README.md` defines an executor/grader protocol.
+- `tests/fixtures/` — 35 behavioral fixtures with expected route, behavior, failure modes, and pass criteria; `tests/README.md` defines an executor/grader protocol.
 - `tests/workflow-traces.md` — seven end-to-end traces. Tracing found and fixed: pack `requires` not loading in modes that don't list them; active packs not restored on continuation; no hook for pack drafting checks; no place for pack constraints in Intent Lock; no storage for per-installment series contracts; skip conditions contradicting explicit triggers; a missing `story_request` task type.
 - `scripts/validate.py` — links and anchors, duplicate anchors, code-span paths, stale references, YAML blocks, SKILL front matter, pack contracts (fields, stages, ids, dependencies, reciprocal conflicts, table sync, legacy triggers), core contracts, fixtures (including trigger/route consistency), research entries and citations, uncited research claims, templates, and index freshness.
 - `scripts/build_source_index.py` generates the source index from entries.

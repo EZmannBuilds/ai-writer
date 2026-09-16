@@ -78,6 +78,7 @@ pass_criteria: []                # checkable statements; all must hold
 | Red herrings come from real secrets | F32 |
 | A romance continuation loads state first | F33 |
 | Comic villain origin: Origin Forge then Comic Panel Writer | F34 |
+| Referenced-but-unsupplied canon isn't invented as approved | F35 |
 
 ---
 
@@ -99,7 +100,8 @@ The suite is run by agents, in two separated roles, so the model that answers is
 Guidance:
 
 - Run executors in independent contexts. A context that has seen other fixtures' criteria is contaminated.
-- A route is judged on task, mode, and packs. Core-module lists may reasonably differ at the edges.
+- A route is judged on task, mode, and packs. `mode` may be a list, meaning any of those modes passes. `packs_optional` lists packs a response may load without failing. Core-module lists may reasonably differ at the edges.
+- For a request carrying several tasks, a route whose task list includes the expected task passes.
 - Treat a fixture failure as a signal to inspect, not an automatic defect: the fixture may be wrong. Fix whichever is wrong and note it in the results.
 - Behavioral results vary between runs. Re-run failures before concluding.
 

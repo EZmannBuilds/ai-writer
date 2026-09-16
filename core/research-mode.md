@@ -57,26 +57,35 @@ Do not research details that don't matter. A story set in Chicago does not need 
 
 ## Fact labels
 
-Every research-sensitive claim gets exactly one label while planning. Labels live in state and planning notes, never in the prose.
+Every research-sensitive claim gets a **kind** and, if it is meant to be real, a **status**. They answer different questions: *is this supposed to be true?* and *has anyone checked?* Labels live in state and planning notes, never in the prose.
 
 ```yaml
 research_item:
   topic:
   claim:
-  label: verified | plausible_invention | deliberate_fictionalization | unverified
-  source:              # required when label is verified
+  kind: real_fact | plausible_invention | deliberate_fictionalization
+  status: verified | unverified      # real_fact only
+  source:              # required when status is verified
   confidence:          # high | medium | low
   story_use:           # which scene/decision depends on it
   depth_needed:        # background | credible | expert
   notes:
 ```
 
-- **verified** — checked against a source this session or a source already recorded in `research`. Cite it.
-- **plausible_invention** — invented, consistent with how the real thing works as far as is known, low-stakes. Not presented as documented fact outside the fiction.
-- **deliberate_fictionalization** — changed on purpose (a fictional city beside a real one, an invented military unit, altered history). Record what was changed and why.
-- **unverified** — believed but not checked. Must be verified or relabeled before it bears plot weight.
+**Kind**
 
-When web access is unavailable, say so. Everything that would have been `verified` becomes `unverified`, and the user hears which details need checking.
+- **real_fact** — meant to match the real world. Needs a status.
+- **plausible_invention** — invented, consistent with how the real thing works as far as is known, low-stakes. Not presented as documented fact outside the fiction. No status needed.
+- **deliberate_fictionalization** — changed on purpose (a fictional city beside a real one, an invented military unit, altered history). Record what was changed and why. No status needed.
+
+**Status** (real facts only)
+
+- **verified** — checked against a source this session or one already recorded in `research`. Cite it.
+- **unverified** — believed but not checked. Must be verified, or re-kinded as invention or fictionalization, before it bears plot weight.
+
+Give every item its own kind. When nothing has been checked yet, real facts are `unverified` — that doesn't change the kind of the invented items. When web access is unavailable, say so, and tell the user which real facts still need checking.
+
+The four combinations a user sees: **verified fact**, **unverified fact**, **plausible invention**, **deliberate fictionalization**.
 
 ---
 
@@ -109,7 +118,7 @@ Research answers factual questions. It does not make artistic decisions.
 1. List research-sensitive details from the request and pack briefs.
 2. Triage each (load / exposure / harm).
 3. Verify what must be verified; cite sources.
-4. Label everything else.
+4. Give every item a kind (and a status if it's a real fact).
 5. Record items in `research`.
 6. Draft.
 7. Fact-label pass: scan the draft for fact-shaped claims without a label.

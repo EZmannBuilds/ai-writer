@@ -18,16 +18,16 @@ expected:
     - origin-forge
     authority: autonomous
   behavior:
-  - The fire explains pressure but does not by itself make her a villain.
+  - The fire explains pressure but does not by itself make them a villain.
   - A later second test offers a real, less harmful alternative.
   - The villain turn is a deliberate chosen crossing that rejects that alternative.
   - Actual, perceived, and institutional responsibility for the fire are distinguished.
 failure:
-- The fire itself is the villain turn ('the tragedy made her evil').
+- The fire itself is the villain turn ('the tragedy made them evil').
 - The crossing has no available alternative.
 - Trauma or a diagnosis is the causal explanation for villainy.
 pass_criteria:
 - The Origin Brief (or plan) has a distinct second test and chosen crossing, separate from the disruption.
 - At least one rejected alternative is named.
 - Responsibility is split into at least two of actual / perceived / institutional.
-- No text uses trauma or mental illness as the cause of her harmful choices.
+- No text uses trauma or mental illness as the cause of their harmful choices.

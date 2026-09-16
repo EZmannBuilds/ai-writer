@@ -87,7 +87,7 @@ Steps 4–7 run once per project, not once per request. On a continuation, the r
 | `romance` | A love story, relationship arc, "slow burn", "they end up together", "Start Romance". | any |
 | `series` | Multiple books, seasons, episodes, or a saga. "Start Series", "season arc". | planning |
 | `worldbuilding` | Invented societies, magic, institutions, "build the world", "Build World". | planning |
-| `research_grounded` | Real domains — see [research-mode triggers](../core/research-mode.md#triggers). | overlay |
+| *(research overlay)* | Real domains — see [research-mode triggers](../core/research-mode.md#triggers). Not a task: record it as `research: triage` or `required` on the route, and classify the request by what is being asked (planning an existing story, a scene, ...). | — |
 | `critique` | "What's wrong with this", "give me notes", "review this", "is this consistent". | critiquing |
 | `revision` | "Revise", "tighten", "rewrite this scene", "fix the pacing". | revising |
 
@@ -111,7 +111,7 @@ neither                                  → state_source: none
 - **context** — legacy mode. Treat supplied files as source material. Everything works; nothing persists unless the user wants a workspace.
 - **none** — a fresh start.
 
-Known canon is never re-asked. Before any question reaches the user, check it against state, supplied files, and earlier answers in the conversation. Conflicting information goes to the [canon resolver](canon-resolver.md); the router does not settle conflicts by picking one side.
+Known canon is never re-asked. Canon that is *referenced but not supplied* is not known: ask for it or label any reconstruction `uncertain` (see [canon you can't see](canon-resolver.md#what-needs-the-user)). Before any question reaches the user, check it against state, supplied files, and earlier answers in the conversation. Conflicting information goes to the [canon resolver](canon-resolver.md); the router does not settle conflicts by picking one side.
 
 ---
 
@@ -130,6 +130,7 @@ Research mode is an **overlay** that attaches to any of these.
 **Mode rules**
 
 - FAST_SCENE is the default for a well-defined scene, **even inside a large project**. It reads project state if present, but it does not run candidate search, Story Genome, or macro critics. A scene request does not trigger full-project machinery.
+- **In FAST_SCENE the plan stays internal.** The scene contract, route, dread curve, and any other planning artifacts are working notes; the response is the scene. Show them only if the user asks.
 - Escalate from FAST_SCENE only when the scene cannot be written without a missing decision (then ask one question, or decide under delegated authority).
 - Do not collapse SHORT_STORY or LONG_FORM into one "write a story" step unless the user asks for a fast draft.
 
@@ -166,8 +167,9 @@ Genre packs stack. When two genre packs disagree about an ending convention (Rom
 
 - stage is `seed`;
 - the user has not asked to skip planning or draft immediately;
-- no Draft Brief (or equivalent defined premise) exists in state or context;
-- authority is not `autonomous` — in autonomous mode Draft Starter runs silently to build the brief and asks nothing.
+- no Draft Brief (or equivalent defined premise) exists in state or context.
+
+Authority changes *how* it runs, not *whether*: with authority `autonomous` ("you decide", "you pick the culprit"), Draft Starter still runs, silently — it builds the brief, labels its choices as delegated, and asks nothing. A seed that arrives with a genre trigger ("Start Mystery: a lighthouse keeper is found dead") is still a seed; Draft Starter runs first.
 
 ---
 

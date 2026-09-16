@@ -18,6 +18,8 @@ The scene contract, and the craft tests that decide where a scene starts, what i
 
 ## Scene Contract
 
+The contract is a working tool. For a scene request, fill it internally and return the scene; show the contract only when the user is planning or asks to see it.
+
 ```yaml
 scene_contract:
   pov_character:

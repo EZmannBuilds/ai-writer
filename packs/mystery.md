@@ -135,6 +135,8 @@ suspect_state:
 
 **Red herrings come from real secrets.** An innocent suspect who lies does so for a reason of their own — an affair, a debt, an embarrassment — not because the plot needs a suspect [@calvin-2021]. Record the secret, and decide whether it's revealed on the page or stays in backstory.
 
+When presenting suspects, give each one a full `suspect_state` record in the schema's shape — every field present, written as `none` or `unknown` when empty — so gaps are visible rather than hidden in prose.
+
 Every suspect's knowledge must be consistent with the truth model. Run the [Perspective Filter](../core/character-model.md#perspective-filter) before any suspect speaks.
 
 ### 3. Clue ledger

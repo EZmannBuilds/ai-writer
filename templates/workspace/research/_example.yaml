@@ -2,7 +2,8 @@
 topic: example
 items: []
 # - claim:
-#   label: verified          # verified | plausible_invention | deliberate_fictionalization | unverified
+#   kind: real_fact          # real_fact | plausible_invention | deliberate_fictionalization
+#   status: verified         # verified | unverified (real_fact only)
 #   source:
 #   confidence:
 #   story_use:

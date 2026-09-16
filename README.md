@@ -92,7 +92,7 @@ runtime/     router, project state, workspace, canon resolver
 core/        22 focused modules, loaded on demand
 packs/       9 optional packs with front-matter contracts
 research/    sources, what each supports, limits, benchmark
-tests/       34 behavioral fixtures and 7 workflow traces
+tests/       35 behavioral fixtures, 7 workflow traces, run results
 docs/        pack authoring guide, v0.5 → v0.6 migration map
 templates/   pack template, workspace starter files
 scripts/     repository validation
@@ -162,7 +162,7 @@ AI Writer's tests check **behavior and invariants**, not taste:
 - a comic panel is drawable;
 - user intent beats every heuristic.
 
-There are 34 fixtures in [tests/fixtures/](tests/fixtures/), each run by an executor agent and graded by a separate agent; see [tests/README.md](tests/README.md). [Seven end-to-end workflows](tests/workflow-traces.md) are traced step by step.
+There are 35 fixtures in [tests/fixtures/](tests/fixtures/), each run by an executor agent and graded by a separate agent; see [tests/README.md](tests/README.md). The [latest run](tests/results/2026-09-16.md) passes all 35 after three rounds, and records what failed along the way and what changed. [Seven end-to-end workflows](tests/workflow-traces.md) are traced step by step.
 
 Whether AI Writer makes fiction **better** is a separate question, for the [benchmark](research/benchmark.md): blinded, human, pairwise comparison against the same model without the skill. Automated checks may help with continuity and repetition; they never judge beauty, voice, or originality.
 

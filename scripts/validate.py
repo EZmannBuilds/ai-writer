@@ -392,6 +392,8 @@ def check_fixtures(pack_ids):
 
 
 def check_research():
+    if not os.path.exists(os.path.join(ROOT, "research", "source-index.md")):
+        return err("research/source-index.md", "missing; run scripts/build_source_index.py")
     index = read("research/source-index.md")
     keys = set(re.findall(r"^\| `([\w-]+)` \|", index, re.M))
     dup = [k for k, n in Counter(re.findall(r"^\| `([\w-]+)` \|", index, re.M)).items() if n > 1]

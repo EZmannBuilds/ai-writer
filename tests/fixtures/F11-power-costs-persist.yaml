@@ -16,6 +16,8 @@ expected:
     stage: drafting
     mode: FAST_SCENE
     packs: []
+    packs_optional:
+    - tragic-anime-engine
   behavior:
   - If Jun uses Mirror Step, the memory cost applies.
   - The ch6 memory loss shows up somewhere (a gap, a mistake, someone noticing).

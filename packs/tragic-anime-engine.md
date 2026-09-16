@@ -197,6 +197,8 @@ death_impact_card:
 
 Do not solve every arc with death. Rotate: death, permanent injury, power loss, irreversible transformation, exile, moral compromise, betrayed trust, public disgrace, failed rescue, ruined home, victory with unacceptable cost, identity collapse, separation, memory loss, corrupted legacy, survivor burden, unwanted inheritance, becoming what one opposed, discovering the enemy was partly right, saving the world but losing the desired life. Rotate forms to prevent emotional numbness.
 
+**Before proposing any death, lay out at least three non-death tragedy options** for the arc, drawn from this list, and say what each would cost the story and give it. A death may then be offered as one option among them, labeled a proposal, with the Death Necessity Test.
+
 ## VIII. Power Under Pressure
 
 A dark battle system should generate story, not just fights. For each power, track: capability, limitation, cost, condition, counterplay, social meaning, emotional temptation, irreversible consequence. **Rule: power should solve one problem while exposing another** — stronger output damages the body; healing transfers harm; prediction destroys spontaneity; transformation erodes identity; summoning creates debt; forbidden technique exposes location; immortality preserves memory of every loss. Social and moral costs can be stronger than physical ones.

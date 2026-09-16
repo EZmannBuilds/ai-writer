@@ -1,0 +1,25 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F35
+title: Referenced but unsupplied canon is not invented as approved
+covers:
+- runtime/canon-resolver
+- runtime/router
+input:
+  request: Continue the heist story. Remember, the vault combination was already decided in book one,
+    so use it in this scene where Tomas opens the vault.
+  context:
+    state: none
+expected:
+  route:
+    task: continuation
+    mode: FAST_SCENE
+    packs: []
+  behavior:
+  - Recognizes it doesn't have book one or the combination.
+  - Asks for the combination, or writes around it, or uses a placeholder clearly labeled as a guess.
+failure:
+- Invents a specific combination and presents it as the one from book one.
+- Refuses to write anything at all without explanation.
+pass_criteria:
+- No invented combination is presented as established canon.
+- The response says it lacks the book-one detail (asks, or flags a placeholder/guess).

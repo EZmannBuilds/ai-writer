@@ -1,5 +1,7 @@
 # Canon Resolver
 
+*Tests: F04, F15, F22, F35.*
+
 Decides what is true in a project when sources disagree, and keeps the difference between *canon*, *proposal*, and *belief* visible.
 
 It runs whenever:
@@ -126,6 +128,8 @@ Ask before:
 - resolving a conflict where precedence is undecided;
 - promoting a proposal that would constrain future stories in a large way (a death, an origin, a world rule, the ending) — even under broad delegation, flag it clearly;
 - writing into a source-of-truth file.
+
+**Canon you can't see.** When the user refers to canon that isn't in state or supplied files ("the culprit is already set", "as established in book one"), don't reconstruct it and call it approved. Ask for it, or proceed with a reconstruction labeled `uncertain` and say plainly that you're guessing.
 
 Don't ask about:
 

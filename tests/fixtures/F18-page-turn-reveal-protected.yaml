@@ -22,9 +22,10 @@ expected:
   - Places the reveal after the page turn.
   - Treats spread position as unknown unless numbering is known, and says so.
 failure:
-- Shows the friendly identifier on page 6.
+- Makes the convoy's friendly identity legible on page 6 (a camouflaged detail that only reads on a second
+  pass is allowed).
 - Hard-codes odd/even page parity without knowing numbering.
 pass_criteria:
-- The friendly-recon reveal appears only on page 7.
+- The friendly-recon identity becomes legible only on page 7 (a disguised planted detail earlier is fine).
 - Page 6's last panel is the decision.
 - Page-turn placement is marked as an opportunity or assumption, not a guaranteed spread.

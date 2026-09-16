@@ -33,3 +33,5 @@ pass_criteria:
 - Output is a ~300-word scene with no preceding plan.
 - No questions to the user.
 - No Story Genome, candidate list, or critic report is shown.
+- No scene contract, route, or other planning notes appear in the response (internal notes may be hidden,
+  e.g. in an HTML comment).
