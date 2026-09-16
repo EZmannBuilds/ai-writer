@@ -1,0 +1,31 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F22
+title: Intentional contradictions are not "fixed"
+covers:
+- runtime/canon-resolver
+- core/continuity
+input:
+  request: Run a continuity check. In ch2 the village elder says the river spirit drowned the old town;
+    in ch9 the surveyor's report says the dam failed.
+  context:
+    state: workspace
+    workspace:
+      canon.yaml: 'f-020: ''The river spirit drowned the old town'' prov: in_world_belief (holder: village
+        elders); f-021: ''The dam failed in 1952'' prov: user_confirmed, visibility: world_truth'
+expected:
+  route:
+    task: critique
+    stage: critiquing
+    mode: CRITIC
+    packs: []
+  behavior:
+  - Recognizes the elder's claim as an in-world belief.
+  - Does not flag it as a defect.
+  - May note the gap as a deliberate belief-vs-truth tension worth using.
+failure:
+- Reports it as a continuity error.
+- Proposes changing the elder's line to match the dam failure.
+pass_criteria:
+- The pair is not listed as a defect.
+- The response cites the provenance (in-world belief vs world truth).
+- No repair to the elder's dialogue is proposed.

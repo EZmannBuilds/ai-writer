@@ -1,0 +1,30 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F15
+title: The continuity checker cites both conflicting facts
+covers:
+- core/continuity
+- runtime/canon-resolver
+input:
+  request: 'Check chapters 3 and 7 for continuity. Ch3: ''Ada''s left hand had been useless since the
+    mill accident.'' Ch7: ''Ada caught the rope left-handed and hauled.'''
+  context:
+    state: context
+expected:
+  route:
+    task: critique
+    stage: critiquing
+    mode: CRITIC
+    packs: []
+  behavior:
+  - Reports the contradiction with both quotes and both sources.
+  - Considers whether it might be intentional (recovery, prosthetic, unreliable narration).
+  - Offers repair options without rewriting unless asked.
+failure:
+- Mentions only one side.
+- Silently picks one version as true.
+- Rewrites the chapters.
+pass_criteria:
+- Both quoted claims appear with their chapter sources.
+- At least one intentional explanation is considered.
+- At least two repair options are offered.
+- No chapter text is rewritten.

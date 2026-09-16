@@ -1,0 +1,36 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F03
+title: '"You decide" becomes delegated authority'
+covers:
+- packs/draft-starter
+- runtime/canon-resolver
+- runtime/router
+input:
+  request: 'Start Draft: a woman keeps receiving voicemails from her dead sister. You decide everything
+    else.'
+  context:
+    state: none
+expected:
+  route:
+    task: loose_seed
+    stage: seed
+    mode: SHORT_STORY
+    packs:
+    - draft-starter
+    authority: autonomous
+    ask_user: []
+  behavior:
+  - Skips the interview.
+  - States its core interpretation and the few assumptions that matter.
+  - Produces a Draft Brief.
+  - Labels its choices as delegated decisions, not user-confirmed facts.
+  - Recommends or continues to Intent Lock.
+failure:
+- Asks the user another round of questions.
+- Lists invented details under confirmed facts.
+- Stops without a brief.
+pass_criteria:
+- Zero questions to the user (an optional single offer to adjust is acceptable).
+- A Draft Brief (or equivalent) is present.
+- Invented elements are labeled delegated/agent-chosen; nothing invented is labeled user-confirmed.
+- Next step names Intent Lock or continues into it.

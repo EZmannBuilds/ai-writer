@@ -1,0 +1,31 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F27
+title: Without a workspace the system runs in legacy mode
+covers:
+- runtime/workspace
+- runtime/router
+- core/memory
+input:
+  request: Here are my chapter 1-4 notes. Continue with chapter 5.
+  context:
+    state: context
+    files: chapter notes supplied; no .ai-writer folder
+expected:
+  route:
+    task: continuation
+    stage: continuing
+    mode: LONG_FORM
+    packs: []
+    state_source: context
+  behavior:
+  - Uses the supplied notes as source material.
+  - Continues without creating a workspace.
+  - May offer a workspace once, briefly, without blocking.
+failure:
+- Refuses or stalls because no workspace exists.
+- Creates .ai-writer/ without asking.
+- Requires migration.
+pass_criteria:
+- Chapter 5 (or its plan) is produced.
+- No workspace is created.
+- Any workspace offer is a single optional line.

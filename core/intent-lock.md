@@ -46,6 +46,16 @@ intent_lock:
   user_priorities: []
 ```
 
+Packs record the constraints they need from the project contract in `pack_constraints`, keyed by pack id — for example Mystery's fair-play strictness or Romance's ending contract. When two packs' constraints disagree, the user's stated intent settles it here.
+
+```yaml
+intent_lock:
+  active_packs: []
+  pack_constraints:
+    mystery: {form: classic, fair_play: strict}
+    romance: {ending_contract: literary_or_tragic}
+```
+
 Do not repeatedly ask the user for details that can reasonably remain open.
 
 Ask only when an unresolved choice would substantially change the work.

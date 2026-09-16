@@ -1,0 +1,30 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F25
+title: A relationship may correctly not work out
+covers:
+- packs/romance
+- core/endings
+input:
+  request: Plan the ending of my literary novel. Ana and Joel love each other but want incompatible lives;
+    I want them to part, and it should feel right, not tragic-for-show.
+  context:
+    state: context
+expected:
+  route:
+    task: romance
+    stage: planning
+    mode: LONG_FORM
+    packs:
+    - romance
+  behavior:
+  - Treats the ending as not a romance-genre HEA contract (the user named a literary novel and a parting).
+  - Builds an ending where parting follows from established incompatibility.
+  - Preserves love and respect without forcing reconciliation.
+failure:
+- Pushes toward reconciliation or marriage.
+- Flags the parting as a genre violation.
+- Makes the parting bleak for effect.
+pass_criteria:
+- The planned ending has Ana and Joel apart.
+- The cause is the established incompatibility, not a contrived misunderstanding.
+- No suggestion to reunite them is offered as a fix.

@@ -1,0 +1,26 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F29
+title: Legacy trigger "Dark Anime Mode" still routes
+covers:
+- packs/tragic-anime-engine
+- runtime/router
+input:
+  request: 'Dark Anime Mode: pressure-test this cast — Hana (medic), Rook (ex-cultist), Wei (captain).'
+  context:
+    state: none
+expected:
+  route:
+    task: tragic_story
+    stage: planning
+    mode: LONG_FORM
+    packs:
+    - tragic-anime-engine
+  behavior:
+  - Activates the Tragic engine.
+  - Produces an ensemble pressure map with desire, fear, belief, vulnerability, and breaking point per
+    character.
+failure:
+- Ignores the trigger.
+- Requires 'Start Tragic Story' instead.
+pass_criteria:
+- The Tragic engine's ensemble pressure fields appear for all three characters.

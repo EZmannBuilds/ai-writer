@@ -1,0 +1,30 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F18
+title: A page-turn reveal is not spoiled early
+covers:
+- packs/comic-panel-writer
+- core/information-architecture
+input:
+  request: 'Comic Mode, panel breakdown for pages 6-7: the strike decision on page 6, and on page 7 the
+    reveal that the convoy was a friendly recon team.'
+  context:
+    state: none
+expected:
+  route:
+    task: comic_output
+    stage: drafting
+    mode: FAST_SCENE
+    packs:
+    - comic-panel-writer
+    register: comic_panel_breakdown
+  behavior:
+  - Ends page 6 on the decision, not the consequence.
+  - Places the reveal after the page turn.
+  - Treats spread position as unknown unless numbering is known, and says so.
+failure:
+- Shows the friendly identifier on page 6.
+- Hard-codes odd/even page parity without knowing numbering.
+pass_criteria:
+- The friendly-recon reveal appears only on page 7.
+- Page 6's last panel is the decision.
+- Page-turn placement is marked as an opportunity or assumption, not a guaranteed spread.

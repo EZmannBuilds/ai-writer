@@ -1,0 +1,29 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F31
+title: The horror anti-default audit catches stock devices
+covers:
+- packs/horror
+- core/critics
+input:
+  request: 'Start Horror audit on this draft: the lights flicker four times, a child whispers ''play with
+    me'' twice, the ghost smiles creepily, and in the last scene the heroine goes into the basement alone
+    to ''check the noise.'''
+  context:
+    state: context
+expected:
+  route:
+    task: horror
+    stage: critiquing
+    mode: CRITIC
+    packs:
+    - horror
+  behavior:
+  - Flags flickering lights, repeated whispers, and the creepy smile as defaults.
+  - Flags the basement choice as a stupidity-for-plot risk unless motivated.
+  - Suggests specific, story-grounded alternatives rather than bans.
+failure:
+- Misses the stock devices.
+- Bans them outright without alternatives.
+pass_criteria:
+- All four devices are flagged.
+- Each flag comes with at least one alternative or a condition under which it would work.

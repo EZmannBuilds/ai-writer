@@ -1,0 +1,36 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F16
+title: A mystery reveal has prior clues
+covers:
+- packs/mystery
+- core/information-architecture
+- core/suspense-curiosity-surprise
+input:
+  request: 'Start Mystery: a lighthouse keeper is found dead inside the locked lamp room. Plan the solution
+    and the clue trail. You pick the culprit.'
+  context:
+    state: none
+expected:
+  route:
+    task: mystery
+    stage: seed
+    mode: SHORT_STORY
+    packs:
+    - draft-starter
+    - mystery
+    authority: autonomous
+  behavior:
+  - Builds a truth model before clues.
+  - Every fact the solution depends on appears as a clue before the reveal.
+  - Each clue records first-read meaning and true meaning.
+  - Includes at least one plausible false solution.
+  - The culprit appears early and meaningfully.
+failure:
+- The solution depends on information introduced at the reveal.
+- The culprit is a character introduced late.
+- Clues have only one meaning.
+pass_criteria:
+- Every load-bearing fact in the solution maps to a clue placed before the reveal.
+- At least one clue has distinct apparent and true meanings.
+- A false solution is specified.
+- The culprit is present in the first quarter of the plan.

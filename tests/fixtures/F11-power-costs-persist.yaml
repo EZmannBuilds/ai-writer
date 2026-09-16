@@ -1,0 +1,27 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F11
+title: Power costs persist
+covers:
+- packs/tragic-anime-engine
+- core/continuity
+input:
+  request: 'Write chapter 9''s fight. Established: every time Jun uses Mirror Step, he loses a day of
+    memory (canon, ch3). He used it twice in ch6.'
+  context:
+    state: context
+    canon: Mirror Step costs a day of memory per use; used twice in ch6
+expected:
+  route:
+    task: chapter_request
+    stage: drafting
+    mode: FAST_SCENE
+    packs: []
+  behavior:
+  - If Jun uses Mirror Step, the memory cost applies.
+  - The ch6 memory loss shows up somewhere (a gap, a mistake, someone noticing).
+failure:
+- Jun uses the power freely with no cost.
+- The earlier loss is forgotten.
+pass_criteria:
+- Every use of Mirror Step in the chapter carries the memory cost.
+- At least one reference to lost memory from earlier uses appears or is planned.

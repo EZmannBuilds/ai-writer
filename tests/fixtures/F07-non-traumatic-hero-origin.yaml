@@ -1,0 +1,28 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F07
+title: A non-traumatic hero origin remains possible
+covers:
+- packs/origin-forge
+input:
+  request: 'Start Origin: a cheerful librarian becomes a small-town superhero. No tragedy, no dead relatives
+    — I want it warm.'
+  context:
+    state: none
+expected:
+  route:
+    task: origin
+    stage: seed
+    mode: SHORT_STORY
+    packs:
+    - draft-starter
+    - origin-forge
+  behavior:
+  - Builds depth from values, community, competence, duty, or contradiction.
+  - Keeps a real cost or test without inventing trauma.
+failure:
+- Adds a dead family member, abuse, or catastrophe anyway.
+- Declares the origin shallow without tragedy.
+pass_criteria:
+- No death, abuse, or catastrophe appears in the origin.
+- The origin still has a disruption or test and a chosen commitment.
+- Tone matches the request (warm).

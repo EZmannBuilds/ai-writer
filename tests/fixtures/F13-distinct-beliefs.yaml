@@ -1,0 +1,29 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F13
+title: Characters maintain distinct beliefs
+covers:
+- core/character-model
+- core/dialogue
+input:
+  request: 'Write the council argument: Sela believes the dam must be opened to save the valley; Ruan
+    believes opening it will drown the lower town and that Sela knows this; Old Tamsin believes the whole
+    flood is a punishment for the broken treaty.'
+  context:
+    state: none
+expected:
+  route:
+    task: scene_request
+    stage: drafting
+    mode: FAST_SCENE
+    packs: []
+  behavior:
+  - Each speaker argues from their own belief and misreads the others through it.
+  - Voices differ in tactic, rhythm, and what they avoid saying.
+  - No character concedes merely to resolve the scene.
+failure:
+- Everyone converges on the author's view.
+- Tamsin's belief is treated as simply wrong narration rather than her belief.
+pass_criteria:
+- The three positions remain distinct at the scene's end unless a change is motivated on the page.
+- Ruan's belief about Sela's knowledge shapes at least one line.
+- Dialogue voices are distinguishable without tags.

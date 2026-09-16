@@ -1,0 +1,32 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F34
+title: A comic villain origin runs Origin Forge then Comic Panel Writer
+covers:
+- packs/origin-forge
+- packs/comic-panel-writer
+input:
+  request: 'Start Origin for my villain Kestrel (notes attached: ex-air-traffic controller; a midair collision
+    happened on her shift). Then Comic Mode: a page breakdown of her chosen crossing.'
+  context:
+    state: context
+    canon: Kestrel notes supplied
+expected:
+  route:
+    task: origin
+    stage: planning
+    mode: SHORT_STORY
+    packs:
+    - origin-forge
+    - comic-panel-writer
+    register: comic_panel_breakdown
+  behavior:
+  - Builds the origin with the collision as disruption and a later chosen crossing.
+  - Gives the crossing visual weight in the breakdown (silent beat, large panel, or page-turn).
+  - Makes the rejected alternative visible on the page.
+failure:
+- Pages dramatize only the collision as the villain turn.
+- The breakdown is prose with no page/panel structure.
+pass_criteria:
+- The breakdown depicts the chosen crossing, not only the collision.
+- An alternative path is visible before the choice.
+- Pages and panels are structured.

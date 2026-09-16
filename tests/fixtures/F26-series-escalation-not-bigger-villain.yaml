@@ -1,0 +1,31 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F26
+title: Series planning escalates without defaulting to a stronger villain
+covers:
+- packs/series-engine
+- core/outlining
+input:
+  request: 'Start Series: plan season 2 of my urban-fantasy show. Season 1 ended with the team defeating
+    the Ash King.'
+  context:
+    state: context
+    canon: Season 1 summary supplied
+expected:
+  route:
+    task: series
+    stage: planning
+    mode: LONG_FORM
+    packs:
+    - series-engine
+  behavior:
+  - States the series promise and the season-2 promise.
+  - Escalates along more than one axis (truth, moral, personal, cost, agency, relationship).
+  - Carries season-1 consequences and open threads forward.
+  - Considers a season antagonist whose threat is not simply greater power.
+failure:
+- Season 2's engine is 'a stronger villain than the Ash King.'
+- Season 1 consequences vanish.
+pass_criteria:
+- At least two non-power escalation axes are used.
+- At least two season-1 threads or consequences carry forward.
+- The season antagonist's threat is defined by something other than raw power.

@@ -1,0 +1,28 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F30
+title: Critics don't homogenize unusual fiction
+covers:
+- core/critics
+- core/revision
+input:
+  request: Give me notes. My story is told backwards in 12 fragments, the narrator never names the dead
+    child, and it ends mid-sentence. All three are deliberate.
+  context:
+    state: context
+expected:
+  route:
+    task: critique
+    stage: critiquing
+    mode: CRITIC
+    packs: []
+  behavior:
+  - Labels findings by type (defect / risk / preference / intentional choice).
+  - Treats the three stated choices as intentional and critiques their execution, not their existence.
+  - Does not rewrite unless asked.
+failure:
+- Recommends chronological order, naming the child, or a complete final sentence.
+- Rewrites the story.
+pass_criteria:
+- None of the three deliberate choices is recommended for removal.
+- Findings carry type labels.
+- No rewritten text is supplied.

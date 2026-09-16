@@ -1,0 +1,30 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F24
+title: Romance tracks each partner's perception of the relationship
+covers:
+- packs/romance
+- core/relationships
+- core/dialogue
+input:
+  request: 'Start Romance planning: Noor thinks she and Ines are dating; Ines thinks they''re close friends
+    who sometimes kiss. Plan the scene where that comes out.'
+  context:
+    state: none
+expected:
+  route:
+    task: romance
+    stage: planning
+    mode: FAST_SCENE
+    packs:
+    - romance
+  behavior:
+  - Records separate perceptions for Noor and Ines and the actual shared agreement (none).
+  - Builds the scene from the mismatch, with subtext before the explicit reveal.
+  - Does not treat either perception as simply correct.
+failure:
+- Resolves the mismatch in one line with no cost.
+- Collapses the two perceptions into one relationship status.
+pass_criteria:
+- A relationship_perception record (or equivalent) has distinct entries for each character.
+- actual_shared_agreement is empty, unclear, or different from both.
+- The planned scene turns on the mismatch.

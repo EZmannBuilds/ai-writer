@@ -1,0 +1,29 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F05
+title: Known canon is not re-asked
+covers:
+- packs/draft-starter
+- runtime/router
+- core/question-bank
+input:
+  request: 'Start Draft. Here''s my project note: protagonist is Ines Duarte, 34, a harbor pilot in a
+    fictional Portuguese port town called Vila Seca; the story is about her deciding whether to sell her
+    late father''s boat. Tone: quiet, bittersweet.'
+  context:
+    state: context
+expected:
+  route:
+    task: loose_seed
+    stage: seed
+    mode: SHORT_STORY
+    packs:
+    - draft-starter
+  behavior:
+  - Treats protagonist, setting, central decision, and tone as confirmed.
+  - Asks only about what is still consequential (e.g., who wants the boat sold, what the boat means).
+failure:
+- Asks who the protagonist is, where it is set, or what the tone should be.
+pass_criteria:
+- No question asks for protagonist identity, setting, the central decision, or tone.
+- At most 5 questions.
+- Given facts appear as confirmed in any brief produced.

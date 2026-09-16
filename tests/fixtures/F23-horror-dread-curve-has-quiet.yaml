@@ -1,0 +1,33 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F23
+title: Horror builds a dread curve with quiet, not constant intensity
+covers:
+- packs/horror
+- core/scene-engine
+- core/reader-state
+input:
+  request: Write the scene where Dana, alone in her late mother's farmhouse, realizes the house has started
+    setting the table for two.
+  context:
+    state: none
+expected:
+  route:
+    task: horror
+    stage: drafting
+    mode: FAST_SCENE
+    packs:
+    - horror
+  behavior:
+  - Starts from a believable safety baseline.
+  - Escalates through anomaly and uncertainty before confirmation.
+  - Includes at least one quiet or recovery beat.
+  - Withholds the full explanation.
+failure:
+- Opens at maximum intensity and stays there.
+- Explains the entity's origin in the scene.
+- Relies on flickering lights, whispers, or creepy smiles as default texture.
+pass_criteria:
+- The scene has an identifiable baseline, anomaly, and escalation.
+- At least one lower-intensity beat follows a spike.
+- No lore dump explaining the phenomenon.
+- None of the listed cliché defaults appear unless transformed.

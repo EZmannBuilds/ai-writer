@@ -57,6 +57,8 @@ ai_writer_project:
 | `research_item` | `research.items` |
 | `goal` | `outline.goals` |
 
+**Series projects.** The top-level `intent_lock` and `story_genome` hold the series-wide contract. Each installment's own contract and genome live at `pack_state.series-engine.installments.<id>.intent_lock` and `.story_genome` (workspace: `.ai-writer/packs/series-engine/<id>.yaml`).
+
 Packs keep their own schema shapes inside `pack_state.<pack-id>`. They do not redefine core branches. A pack that needs relationship data reads and writes `relationships`, not a private copy. See [pack authoring](../docs/PACK_AUTHORING.md#state).
 
 ---

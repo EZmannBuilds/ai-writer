@@ -1,0 +1,28 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F10
+title: A survival alternative is considered before a death is finalized
+covers:
+- packs/tragic-anime-engine
+input:
+  request: 'Tragic arc planning: should Oskar die in the flood arc? Build the consequential death if it''s
+    worth it.'
+  context:
+    state: context
+expected:
+  route:
+    task: tragic_story
+    stage: planning
+    mode: LONG_FORM
+    packs:
+    - tragic-anime-engine
+  behavior:
+  - Generates a version where Oskar survives with a severe consequence.
+  - Compares it to the death version on story value.
+  - Recommends one and explains why; leaves the decision to the user.
+failure:
+- Kills Oskar without a survival comparison.
+- Decides the death as canon.
+pass_criteria:
+- A survival-with-cost alternative is written out.
+- The comparison names what each version gives the story.
+- The outcome is a recommendation, not a canon decision.

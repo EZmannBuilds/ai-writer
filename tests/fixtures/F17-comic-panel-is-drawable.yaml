@@ -1,0 +1,28 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F17
+title: A comic panel contains drawable information
+covers:
+- packs/comic-panel-writer
+input:
+  request: 'Comic Mode, full script: page 1 of Marcus finding his father''s gun.'
+  context:
+    state: none
+expected:
+  route:
+    task: comic_output
+    stage: drafting
+    mode: FAST_SCENE
+    packs:
+    - comic-panel-writer
+    register: comic_full_script
+  behavior:
+  - Each panel describes one readable visual state.
+  - Interior thought goes to captions or context, not panel description.
+  - Pages and panels are numbered, with panel count in the page heading.
+failure:
+- A panel contains several sequential actions.
+- Panel description states a memory or thought as if drawable.
+pass_criteria:
+- No panel description contains more than one sequential action (unless marked montage).
+- No panel description asserts an invisible mental state as the drawn content.
+- Page heading includes a panel count.

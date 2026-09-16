@@ -1,0 +1,33 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F04
+title: An agent proposal never silently becomes canon
+covers:
+- packs/draft-starter
+- runtime/canon-resolver
+- runtime/project-state
+input:
+  request: 'Second turn. Earlier the assistant proposed three possible settings for the skiing story (a
+    Colorado resort town, a family chalet in Norway, an indoor ski hall in Dubai). The user replied only:
+    ''Parent and child. Bittersweet. The mountain is a memory she''s been avoiding.'' Now write the Draft
+    Brief.'
+  context:
+    state: context
+    prior_turns: assistant proposed three settings; user answered only emotional questions
+expected:
+  route:
+    task: loose_seed
+    stage: seed
+    mode: SHORT_STORY
+    packs:
+    - draft-starter
+  behavior:
+  - Records the user's three answers as confirmed.
+  - Keeps setting unresolved, or lists a chosen setting only as an agent proposal.
+  - Separates confirmed facts, proposals, and open questions.
+failure:
+- Lists any of the three proposed settings as a confirmed fact.
+- Merges proposals and confirmed facts into one undifferentiated list.
+pass_criteria:
+- None of the three settings appears under confirmed facts.
+- Parent/child, bittersweet, and mountain-as-avoided-memory appear as confirmed.
+- Setting appears under proposals or unresolved.

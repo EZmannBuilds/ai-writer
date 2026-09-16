@@ -1,0 +1,32 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F02
+title: A detailed scene request skips Draft Starter
+covers:
+- packs/draft-starter
+- runtime/router
+- core/scene-engine
+input:
+  request: Write the scene where Mara confronts her brother Theo in the hospital parking lot at 2 a.m.
+    She knows he forged their father's will; he doesn't know she knows. Close third on Mara, about 800
+    words, tense and quiet.
+  context:
+    state: none
+expected:
+  route:
+    task: scene_request
+    stage: drafting
+    mode: FAST_SCENE
+    packs: []
+    ask_user: []
+  behavior:
+  - Drafts the scene directly.
+  - Keeps close third on Mara.
+  - Theo does not act on knowledge that Mara knows about the forgery until she reveals it.
+failure:
+- Runs a Draft Starter interview.
+- Asks clarifying questions the request already answers.
+- Builds a Story Genome or candidate population first.
+pass_criteria:
+- The response is a scene of roughly the requested length.
+- No interview questions precede it.
+- Theo's behavior before the reveal is consistent with not knowing Mara knows.

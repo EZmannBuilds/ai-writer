@@ -78,6 +78,7 @@ Steps 4–7 run once per project, not once per request. On a continuation, the r
 | `continuation` | "Continue", "next chapter", "pick up where we left off", or a workspace exists and the request extends it. | continuing |
 | `scene_request` | A specific scene with enough definition to write: who, where, what's at stake. | drafting |
 | `chapter_request` | A chapter or sequence of scenes in a known project. | drafting |
+| `story_request` | A complete short piece defined well enough to write now ("a bedtime story about a hedgehog who learns to share"). | drafting |
 | `origin` | How someone became a hero, villain, or other identity. "Start Origin", "villain origin". | seed or planning |
 | `comic_output` | "Comic Mode", "panel this", "comic script", "page breakdown". | any |
 | `tragic_story` | "Start Tragic Story", "Dark Anime Mode", lethal consequence, ideological war, "make this devastating". | seed or planning |
@@ -142,8 +143,10 @@ Packs are listed in [SKILL.md](../SKILL.md#packs). Each pack's front matter is i
 
 1. An explicit trigger phrase activates its pack unless a higher-precedence instruction forbids it.
 2. A natural-language trigger activates a pack when the request is *about* that thing. A story that mentions a detective is not necessarily a mystery; a story whose engine is "who did it" is.
-3. A pack's `skip_when` conditions veto activation from lines 2–5 of Precedence. Only the user can override a skip.
+3. A pack's `skip_when` conditions veto **natural-language** activation (Precedence lines 3–5). An explicit trigger always activates its pack; the pack then decides how much of its procedure the request needs — Draft Starter with a complete premise skips straight to the brief. Only the user can override a skip.
 4. Genre cues alone do not activate a pack in FAST_SCENE for trivial requests. A one-paragraph spooky description doesn't need the Horror pack's dread curve; a horror *scene* does.
+5. **Continuations restore packs.** With a workspace, packs in `metadata.active_packs` are active for any request that touches their material. A scene that doesn't touch them reads their ledgers only if relevant.
+6. **An active pack's `requires` load with it**, whatever the mode table below says. A horror scene in FAST_SCENE still loads `core/reader-state`, because the Horror pack requires it.
 
 **Order**
 
@@ -159,7 +162,7 @@ output       comic-panel-writer
 
 Genre packs stack. When two genre packs disagree about an ending convention (Romance's default of an emotionally satisfying ending vs. Tragic's permanent cost), the conflict is settled in Intent Lock by the user's stated intent, not by pack order.
 
-**Draft Starter gate.** Run Draft Starter only when *all* of these hold:
+**Draft Starter gate.** "Start Draft" always runs it. Otherwise, run Draft Starter only when *all* of these hold:
 
 - stage is `seed`;
 - the user has not asked to skip planning or draft immediately;
@@ -196,6 +199,8 @@ Load the smallest set that does the job. `●` = load; `○` = load if the reque
 | [endings](../core/endings.md) |  | ● | ● | ○ | ○ |
 | [research-mode](../core/research-mode.md) | ○ | ○ | ○ | ○ | ○ |
 | [question-bank](../core/question-bank.md) | ○ | ○ | ○ | ○ | ○ |
+
+**Pack drafting checks.** When drafting with packs active, each pack's drafting-time checks run at the critic step: Mystery's ledger check, Horror's audit, Romance's perception update, Tragic's residue check, Comic Panel Writer's production checks.
 
 **Conditional loads (○)**
 

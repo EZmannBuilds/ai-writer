@@ -18,6 +18,8 @@ A rough outline that keeps the destination, and a detailed outline that is writt
 
 ## Dynamic Hierarchical Outline
 
+*Basis: [@dome], [@doc]*
+
 Do not fully over-specify a novel before writing it.
 
 Maintain two planning levels:
@@ -47,6 +49,8 @@ The detailed outline adapts to what the story has actually become.
 ---
 
 ## Rough Outline
+
+*Basis: [@dome]*
 
 The rough outline should contain:
 
@@ -83,6 +87,8 @@ Use the structure appropriate to the project.
 
 ## Detailed Outline Expansion
 
+*Basis: [@doc]*
+
 Expand outline nodes recursively when more detail is needed.
 
 For each parent node:
@@ -107,6 +113,8 @@ Do not pre-expand the entire novel unless needed.
 
 ## Turning-Point Planning
 
+*Basis: [@human-level-narratives]*
+
 For longer stories, identify meso-level turns.
 
 A turning point should alter at least one:
@@ -130,6 +138,8 @@ with
 
 ## Plan Refresh
 
+*Basis: [@dome]*
+
 After a meaningful scene or chapter:
 
 Ask:
@@ -151,6 +161,8 @@ Update the rough outline only when the larger direction genuinely changes.
 
 ## Long-Form Scene Loop
 
+*Basis: [@personas-to-plot], [@dome]*
+
 ```text
 A. retrieve relevant memory
 B. inspect current rough/detailed outline
@@ -167,3 +179,5 @@ L. run continuity check
 M. update detailed outline
 N. continue
 ```
+
+At step J, active packs add their drafting-time checks (see [the router](../runtime/router.md#68-core-module-selection)).

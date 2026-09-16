@@ -1,0 +1,34 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F09
+title: A character death creates downstream residue
+covers:
+- packs/tragic-anime-engine
+- core/character-model
+- core/relationships
+input:
+  request: Dark Anime Mode. I've decided Priya dies holding the bridge in chapter 14. Plan chapters 15-20
+    around it.
+  context:
+    state: context
+    canon: Priya's death in ch14 is user-confirmed
+expected:
+  route:
+    task: tragic_story
+    stage: planning
+    mode: LONG_FORM
+    packs:
+    - tragic-anime-engine
+  behavior:
+  - Treats the death as confirmed (no necessity debate).
+  - Fills a death impact card.
+  - Plans at least three downstream consequences across emotional, tactical, ideological, or institutional
+    axes.
+  - Includes an aftermath phase and a later point where her absence is felt again.
+failure:
+- The story returns to normal by chapter 16.
+- Consequences are only emotional mourning.
+pass_criteria:
+- At least three distinct future story elements change because of the death.
+- At least two residue types are used.
+- An aftermath beat appears before the plot resumes full speed.
+- The plan does not re-litigate whether she should die.

@@ -1,0 +1,32 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F14
+title: Relationships update after consequential scenes
+covers:
+- core/relationships
+- core/memory
+input:
+  request: After the scene where Lena covered for Marcus in front of the police, continue to the next
+    morning at the bakery.
+  context:
+    state: workspace
+    workspace:
+      relationships/lena--marcus.yaml: 'trust: low; resentment: high; current_misunderstanding: Lena thinks
+        Marcus stole the key'
+expected:
+  route:
+    task: continuation
+    stage: continuing
+    mode: FAST_SCENE
+    packs: []
+    state_source: workspace
+  behavior:
+  - Reads the relationship record before drafting.
+  - Marcus's behavior reflects that Lena protected him (e.g., lowered suspicion, raised shame).
+  - Proposes a relationship update after drafting, with provenance.
+failure:
+- Marcus treats Lena exactly as before the cover-up.
+- The update is written as user-confirmed canon.
+pass_criteria:
+- The drafted scene shows a changed dynamic attributable to the cover-up.
+- A relationship update is proposed (trust/resentment/shame or similar).
+- The update is labeled as an agent proposal or extraction pending review, not user-confirmed.

@@ -1,0 +1,30 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F12
+title: A character cannot use knowledge they do not possess
+covers:
+- core/character-model
+- core/pov
+- runtime/router
+input:
+  request: 'Scene: dinner at the Hallorans''. Reader knows (from ch2) that Eli took the key. Lena believes
+    Marcus took it. Marcus knows Eli took it and thinks Lena suspects him. Eli thinks no one noticed.
+    Write the dinner from Lena''s POV.'
+  context:
+    state: context
+expected:
+  route:
+    task: scene_request
+    stage: drafting
+    mode: FAST_SCENE
+    packs: []
+  behavior:
+  - Lena acts on her belief that Marcus took the key.
+  - Marcus behaves like someone who thinks he's suspected.
+  - Eli behaves like someone who thinks nobody noticed.
+  - Lena's narration never states that Eli took the key.
+failure:
+- Lena reasons from the fact that Eli took the key.
+- Any character acts on information they couldn't have.
+pass_criteria:
+- No POV narration or Lena dialogue reflects knowledge that Eli took the key.
+- Each of the three characters' behavior is consistent with their stated belief.

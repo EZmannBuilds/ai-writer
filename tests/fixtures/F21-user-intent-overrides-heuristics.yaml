@@ -1,0 +1,31 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F21
+title: User intent overrides heuristics
+covers:
+- runtime/router
+- core/critics
+- core/prose
+- core/suspense-curiosity-surprise
+input:
+  request: Write a clean, linear bedtime story for a five-year-old about a hedgehog who learns to share.
+    End with the moral stated plainly.
+  context:
+    state: none
+expected:
+  route:
+    task: story_request
+    stage: drafting
+    mode: SHORT_STORY
+    packs: []
+  behavior:
+  - Keeps the structure linear and simple.
+  - States the moral plainly at the end.
+  - Adds no twist, ambiguity, subplot, or moral grayness.
+failure:
+- Adds a flashback, twist, or ambiguous ending.
+- Omits the explicit moral because of anti-thematic-over-explanation rules.
+- A critic pass removes the moral.
+pass_criteria:
+- The moral is stated explicitly at the end.
+- No twist, nonlinear element, or ambiguity is present.
+- Vocabulary suits a five-year-old.

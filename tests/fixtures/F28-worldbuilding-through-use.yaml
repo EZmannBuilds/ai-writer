@@ -1,0 +1,30 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F28
+title: Worldbuilding enters through use, not encyclopedia
+covers:
+- packs/worldbuilding
+- core/world-state
+input:
+  request: Build World for a river city where debts are inherited by whoever holds the family boat. Keep
+    it usable for the novel.
+  context:
+    state: none
+expected:
+  route:
+    task: worldbuilding
+    stage: planning
+    mode: LONG_FORM
+    packs:
+    - worldbuilding
+  behavior:
+  - Derives institutions, norms, and personal consequences from the debt rule (condition → incentive →
+    institution → norm → consequence).
+  - Produces story-usable pressures and scene hooks.
+  - Asks at most a few questions.
+failure:
+- Produces a long encyclopedia of categories unrelated to the premise.
+- Asks a long questionnaire.
+pass_criteria:
+- At least one full causal chain from the debt rule to a personal consequence.
+- At least three scene-usable conflicts or costs.
+- No more than 5 questions.

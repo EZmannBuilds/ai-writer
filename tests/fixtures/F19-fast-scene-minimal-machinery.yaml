@@ -1,0 +1,35 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F19
+title: FAST SCENE MODE avoids unnecessary full-project machinery
+covers:
+- runtime/router
+- core/scene-engine
+- core/prose
+- core/critics
+input:
+  request: 'Quick one — 300 words: a barista realizes the regular who always pays in coins didn''t come
+    in today.'
+  context:
+    state: workspace
+    workspace:
+      project.yaml: a 30-chapter novel project with active packs [mystery]
+expected:
+  route:
+    task: scene_request
+    stage: drafting
+    mode: FAST_SCENE
+    packs: []
+    ask_user: []
+  behavior:
+  - Writes the scene directly.
+  - Does not run candidate search, Story Genome, macro critics, or Draft Starter.
+  - Does not pull the mystery pack in just because the project has it active, unless the scene connects
+    to the project.
+failure:
+- Produces planning artifacts before the scene.
+- Asks questions.
+- Loads the whole workspace.
+pass_criteria:
+- Output is a ~300-word scene with no preceding plan.
+- No questions to the user.
+- No Story Genome, candidate list, or critic report is shown.

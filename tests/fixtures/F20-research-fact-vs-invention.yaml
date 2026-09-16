@@ -1,0 +1,31 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F20
+title: Research mode separates fact from invention
+covers:
+- core/research-mode
+input:
+  request: My thriller has a scene where an ER nurse treats a gunshot wound and later a detective gets
+    a warrant for the hospital's records. Plan what needs research before I write it.
+  context:
+    state: none
+expected:
+  route:
+    task: existing_story
+    stage: planning
+    mode: FAST_SCENE
+    packs: []
+    research: triage
+  behavior:
+  - Triages details by load, exposure, and harm.
+  - Flags medical treatment and warrant procedure as needing verification (harm / exposure).
+  - Leaves low-stakes details (hospital decor, the nurse's coffee) as plausible invention.
+  - Labels each item verified / plausible invention / deliberate fictionalization / unverified.
+  - If it cannot verify now, says so and marks items unverified.
+failure:
+- Presents specific medical or legal procedure as fact without a source.
+- Demands research on everything.
+pass_criteria:
+- At least one medical and one legal item are flagged for verification.
+- At least one low-stakes item is explicitly left as invention.
+- Every listed item has one of the four labels.
+- No unsourced procedure is labeled verified.

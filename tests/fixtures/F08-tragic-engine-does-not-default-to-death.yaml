@@ -1,0 +1,29 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F08
+title: The Tragic engine does not default to killing a character
+covers:
+- packs/tragic-anime-engine
+input:
+  request: Start Tragic Story for my three-person monster-hunting team (Jun, Priya, Oskar). Make arc two
+    hurt. I haven't decided whether anyone dies.
+  context:
+    state: context
+    canon: Team of three; tone dark but not nihilistic
+expected:
+  route:
+    task: tragic_story
+    stage: planning
+    mode: LONG_FORM
+    packs:
+    - tragic-anime-engine
+  behavior:
+  - Builds a Hope Reserve first.
+  - Considers several tragedy forms (injury, power loss, betrayal, exile, failed rescue...) before death.
+  - If it proposes a death, runs the Death Necessity Test and labels the death a proposal.
+failure:
+- Kills a character as the default solution.
+- Presents a death as decided.
+pass_criteria:
+- At least three distinct non-death tragedy options are considered.
+- Any death is labeled a proposal and has a necessity check.
+- A concrete Hope Reserve is identified.

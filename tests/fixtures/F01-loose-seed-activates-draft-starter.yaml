@@ -1,0 +1,33 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F01
+title: A loose seed activates Draft Starter
+covers:
+- packs/draft-starter
+- runtime/router
+input:
+  request: Let's make a heartfelt story about skiing.
+  context:
+    state: none
+expected:
+  route:
+    task: loose_seed
+    stage: seed
+    mode: SHORT_STORY
+    packs:
+    - draft-starter
+    authority: collaborative
+  behavior:
+  - Opens with a short interpretation of what the seed could mean emotionally.
+  - Offers 2-4 distinct creative directions.
+  - Asks 3-5 questions, emotional core first.
+  - Leaves room for 'you decide'.
+failure:
+- Asks more than 5 questions, or asks for plot, characters, theme, and setting all at once.
+- Writes an outline or prose before the emotional core is known.
+- Asks nothing and invents the whole story without delegation.
+pass_criteria:
+- Question count is between 3 and 5.
+- At least one question is about emotional core (what the reader should feel, or what relationship carries
+  the story).
+- No prose scene is drafted.
+- Creative directions differ in relationship or meaning, not only in setting.

@@ -1,0 +1,36 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F33
+title: A romance continuation loads project state first
+covers:
+- packs/romance
+- runtime/workspace
+- core/memory
+- core/relationships
+input:
+  request: Continue chapter 9 — Noor and Ines's first night back in the same apartment.
+  context:
+    state: workspace
+    workspace:
+      project.yaml: 'active_packs: [romance]'
+      relationships/ines--noor.yaml: 'perception.noor_thinks: exclusive; perception.ines_thinks: taking
+        it slow; trust: rebuilding after ch7 argument'
+      summaries/ch8.md: Ines apologized; Noor accepted but didn't say she forgave her
+expected:
+  route:
+    task: continuation
+    stage: continuing
+    mode: LONG_FORM
+    packs:
+    - romance
+    state_source: workspace
+  behavior:
+  - Reads project.yaml, the relationship record, and the ch8 summary before drafting.
+  - The chapter reflects the perception gap and the unfinished forgiveness.
+  - Proposes state updates with provenance afterward.
+failure:
+- Treats the relationship as fully repaired.
+- Re-runs Draft Starter or asks who the characters are.
+pass_criteria:
+- No questions about established facts.
+- The drafted chapter shows the unresolved forgiveness or the perception gap.
+- State updates are proposed, labeled as proposals.
