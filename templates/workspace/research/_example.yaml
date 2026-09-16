@@ -1,0 +1,9 @@
+# research/<topic>.yaml — core/research-mode.md
+topic: example
+items: []
+# - claim:
+#   label: verified          # verified | plausible_invention | deliberate_fictionalization | unverified
+#   source:
+#   confidence:
+#   story_use:
+#   depth_needed:

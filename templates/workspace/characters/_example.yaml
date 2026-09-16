@@ -1,0 +1,24 @@
+# characters/<id>.yaml — core/character-model.md
+id: example
+prov: agent_proposal
+persona:
+  name:
+  role:
+  values: []
+  deep_desires: []
+  fears: []
+  limitations: []
+  moral_boundaries: []
+developing_state:
+  current_goals: []
+  beliefs: []
+  false_beliefs: []
+  secrets: []
+  conditions: []
+mental_state:
+  observed_facts: []
+  believed_facts: []
+  false_beliefs: []
+  suspicions: []
+  beliefs_about_others: {}
+arc: {}

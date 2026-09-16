@@ -1,0 +1,10 @@
+# Canon facts — see runtime/canon-resolver.md
+facts: []
+# - id: f-001
+#   subject: port-calder
+#   fact: Port Calder sits on the north shore of the lake.
+#   prov: {status: user_confirmed, source: "user, 2026-09-16"}
+#   continuity: main
+#   visibility: world_truth      # world_truth | public_belief | secret | character_belief
+#   supersedes:
+#   superseded_by:

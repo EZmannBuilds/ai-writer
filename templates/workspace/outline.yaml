@@ -1,0 +1,4 @@
+# core/outlining.md
+rough: []        # rough_outline_node records
+detailed: []     # near-future nodes, written just in time
+goals: []        # goal records (core/character-agency.md)

@@ -1,0 +1,19 @@
+# core/story-genome.md
+story_genome:
+  premise:
+  dramatic_question:
+  central_desire:
+  central_pressure:
+  central_unknown:
+  central_contradiction:
+  protagonist:
+  major_relationships: []
+  important_world_rules: []
+  thematic_questions: []
+  emotional_destination:
+  reader_contract:
+  ending_contract:
+  motifs: []
+  structural_permissions: []
+  anti_goals: []
+prov: agent_proposal

@@ -1,0 +1,26 @@
+# AI Writer project state — see runtime/project-state.md
+# Fill only what the project uses. Empty is fine.
+metadata:
+  id: my-project            # kebab-case, stable
+  title:
+  format:                   # scene | short_story | novella | novel | series | comic | other
+  schema_version: 1
+  created:
+  updated:
+  mode:                     # FAST_SCENE | SHORT_STORY | LONG_FORM
+  active_packs: []
+
+provenance:
+  default_status: agent_proposal   # nothing is canon by default
+  source_of_truth: []              # - {path: "Notes/World.md", scope: world}
+  continuities:
+    - id: main
+      default: true
+
+intent_lock: {}             # core/intent-lock.md
+
+reader_state: {}            # core/reader-state.md
+
+continuity:
+  issues: []
+  resolutions: []

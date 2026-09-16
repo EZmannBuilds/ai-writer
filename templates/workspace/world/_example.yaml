@@ -1,0 +1,8 @@
+# world/<topic>.yaml — core/world-state.md; packs/worldbuilding.md extends it
+topic: example
+rules: []
+places: []
+institutions: []
+social: {}
+objects: {}
+prov: agent_proposal

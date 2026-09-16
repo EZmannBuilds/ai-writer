@@ -1,0 +1,5 @@
+# packs/<pack-id>.yaml — that pack's state (briefs, ledgers).
+# The shape is defined by the pack. Core branches stay in their own files.
+pack: example-pack
+version:
+state: {}

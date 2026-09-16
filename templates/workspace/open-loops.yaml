@@ -1,0 +1,10 @@
+# Curiosity, suspense, reveal, clue, and promise threads
+items: []
+# - id: q-001
+#   kind: curiosity          # curiosity | suspense | reveal | clue | promise | mystery
+#   question:
+#   opened_at:
+#   horizon:
+#   status: open             # open | developing | paid | intentionally_open | abandoned
+#   pack:
+#   ref:

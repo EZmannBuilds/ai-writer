@@ -1,0 +1,13 @@
+# relationships/<a>--<b>.yaml (ids in alphabetical order) — core/relationships.md
+id: alpha--beta
+record:
+  trust:
+  affection:
+  fear:
+  resentment:
+  power_balance:
+  current_misunderstanding:
+  recent_change:
+perception: {}      # packs/romance.md adds relationship_perception here
+history: []         # timeline event ids
+prov: agent_proposal

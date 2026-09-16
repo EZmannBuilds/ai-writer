@@ -1,0 +1,9 @@
+# core/memory.md — temporal event facts. Append; never rewrite history.
+events: []
+# - id: e-001
+#   subject: lena
+#   relation: trusts
+#   object: marcus
+#   time: ch2
+#   source: "Chapter 2.md"
+#   prov: user_confirmed
