@@ -18,6 +18,8 @@ Finding contradictions with evidence from both sides, and knowing when a contrad
 
 ## Consistency Taxonomy
 
+*Basis: [@lost-in-stories]*
+
 Check long stories across five major categories.
 
 ### Timeline and Plot Logic
@@ -66,6 +68,8 @@ Intentional exceptions must be marked:
 
 ## Evidence-Based Continuity Checker
 
+*Basis: [@lost-in-stories]*
+
 Do not merely ask "Is this consistent?"
 
 Use four stages:
@@ -97,6 +101,8 @@ The checker must point to both sides of the conflict.
 ---
 
 ## Situation-Model Continuity
+
+*Basis: [@event-indexing]*
 
 For scene transitions, ask:
 

@@ -66,6 +66,8 @@ Do not make all dialogue equally witty.
 
 ## Dialogue and Subtext Engine
 
+*Basis: [@reedsy-dialogue], [@masterclass-dialogue], [@nybe-dialogue], [@scriptmag-subtext]*
+
 Dialogue should not be a transcript of real speech, nor an author briefing disguised as conversation.
 
 For important exchanges define:

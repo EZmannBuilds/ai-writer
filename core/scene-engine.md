@@ -68,6 +68,8 @@ A scene should usually change at least one:
 
 ## Scene Goal, Resistance, Change
 
+*Basis: [@reedsy-scene-anatomy]*
+
 A functional scene usually contains:
 
 ```text
@@ -125,6 +127,8 @@ Do not keep a scene merely because its prose is attractive.
 
 ## Scene Entry / Exit Control
 
+*Basis: [@reedsy-pacing]*
+
 Use **enter late, leave early** as a test, not a commandment.
 
 ### Enter late
@@ -176,6 +180,8 @@ Restore anything whose absence damages intended effect.
 ---
 
 ## Stakes and Tension
+
+*Basis: [@wd-character-wants], [@reedsy-conflict], [@nybe-stakes]*
 
 Stakes do not have to mean:
 - death;

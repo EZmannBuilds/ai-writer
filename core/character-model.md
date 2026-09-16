@@ -18,9 +18,11 @@ Major characters as stateful minds with limited knowledge. This module defines w
 
 ## Character architecture
 
+*Basis: [@personas-to-plot], [@doc]*
+
 Major characters are stateful narrative agents.
 
-### 10.1 Stable Persona
+### Stable Persona
 
 ```yaml
 persona:
@@ -42,7 +44,7 @@ persona:
   habitual_defenses: []
 ```
 
-### 10.2 Developing State
+### Developing State
 
 ```yaml
 developing_state:
@@ -57,7 +59,7 @@ developing_state:
   psychological_trajectory:
 ```
 
-### 10.3 Immediate Scene State
+### Immediate Scene State
 
 ```yaml
 scene_state:
@@ -76,6 +78,8 @@ scene_state:
 ---
 
 ## Theory-of-Mind Character Model
+
+*Basis: [@think-twice], [@beyond-words]*
 
 A character must not reason from the author's omniscient context.
 
@@ -121,6 +125,8 @@ Everyone knows Eli took the key.
 
 ## Perspective Filter
 
+*Basis: [@think-twice]*
+
 Before generating a major character's:
 
 - action;
@@ -160,6 +166,8 @@ character intention
 ---
 
 ## Belief–Desire–Intention Loop
+
+*Basis: [@beyond-words]*
 
 For socially complex scenes, model each major character as:
 
@@ -223,6 +231,8 @@ Use deeper recursion only when it clearly matters.
 ---
 
 ## Dynamic character development
+
+*Basis: [@doc]*
 
 After a character participates in a consequential scene, update their developing state.
 

@@ -18,6 +18,8 @@ Specialized critics, a leader who may reject them, and the rules that stop criti
 
 ## Automatic Judge Warning
 
+*Basis: [@limits-auto-eval]*
+
 Automated judges are not the reader.
 
 Potential failure loop:
@@ -83,6 +85,8 @@ Suggested cadence:
 
 ## Psychological Depth Scale
 
+*Basis: [@psych-depth]*
+
 Evaluate stories using five distinct reader-centered dimensions.
 
 ### Emotion Provocation
@@ -129,6 +133,8 @@ Narrative complexity is not syntactic complexity.
 
 ## Psychological Depth Critic Council
 
+*Basis: [@psych-depth]*
+
 Use separate personas when evaluating these dimensions.
 
 ```text
@@ -153,6 +159,8 @@ Do not average them into one number without preserving the individual profile.
 ---
 
 ## StoryScope Anti-Default Audit
+
+*Basis: [@storyscope]*
 
 AI fiction exhibits recurring structural tendencies.
 
@@ -201,6 +209,8 @@ Never insert these merely to pass the audit.
 
 ## StoryScope evidence summary
 
+*Basis: [@storyscope]*
+
 StoryScope (Russell et al., 2026) found that discourse-level narrative features can distinguish
 AI-generated from human-authored fiction even without style signals.
 
@@ -248,6 +258,8 @@ The target is **deliberate range**, not "human-looking" camouflage.
 
 ## Macro Creativity Critics
 
+*Basis: [@critics]*
+
 Before drafting a long story, run three plan-level critics:
 
 ### Critic A: Original Theme / Plot / Setting
@@ -286,6 +298,8 @@ Each critic proposes one to three high-impact changes.
 
 ## Critic Leader
 
+*Basis: [@critics]*
+
 A leader/editor receives competing critic proposals.
 
 The leader must evaluate:
@@ -316,6 +330,8 @@ The leader protects:
 
 ## Multi-Round Plan Refinement
 
+*Basis: [@critics]*
+
 For high-stakes projects:
 
 ```text
@@ -337,6 +353,8 @@ Preserve earlier candidates and compare them.
 ---
 
 ## Micro Creativity Critics
+
+*Basis: [@critics], [@storyscope]*
 
 At prose level, separate two kinds of expressive criticism.
 
@@ -370,6 +388,8 @@ A dialogue line may need voice, not another description of someone's heartbeat.
 ---
 
 ## Evaluation Profile
+
+*Basis: [@limits-auto-eval], [@psych-depth]*
 
 ```yaml
 evaluation_profile:

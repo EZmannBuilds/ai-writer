@@ -18,6 +18,8 @@ Three different tension mechanisms. Use the right one; chain them deliberately.
 
 ## Curiosity vs Suspense vs Surprise
 
+*Basis: [@brewer-lichtenstein-1982]*
+
 Use the correct narrative tension mechanism.
 
 ```text
@@ -54,6 +56,8 @@ New curiosity: Why is Maya's own coat inside?
 
 ## Suspense Engine
 
+*Basis: [@suspense-planning]*
+
 Suspense requires:
 
 1. a target outcome the reader hopes for or fears;
@@ -80,6 +84,8 @@ suspense_thread:
 ---
 
 ## Adversarial Suspense Planning
+
+*Basis: [@suspense-planning]*
 
 For a suspense-bearing sequence:
 
@@ -120,6 +126,8 @@ The final result should follow the project's intended ending logic.
 
 ## Knowledge Disparity
 
+*Basis: [@suspense-planning]*
+
 Track three knowledge sets:
 
 ```yaml
@@ -140,6 +148,8 @@ Use these asymmetries deliberately.
 ---
 
 ## Curiosity Engine
+
+*Basis: [@loewenstein-1994]*
 
 Curiosity differs from suspense and surprise.
 
@@ -176,6 +186,8 @@ Why does everyone remember the accident differently?
 
 ## Information-Gap Calibration
 
+*Basis: [@loewenstein-1994]*
+
 Curiosity can fail in two opposite directions.
 
 ### Gap too small
@@ -209,6 +221,8 @@ comprehensibility must remain high enough for the reader to engage.
 
 ## Curiosity Update Loop
 
+*Basis: [@loewenstein-1994]*
+
 For active curiosity threads:
 
 ```text
@@ -230,6 +244,8 @@ A useful clue should alter at least one hypothesis.
 ---
 
 ## Narrative Surprise Engine
+
+*Basis: [@narrative-surprise]*
 
 Evaluate significant twists and endings with six dimensions:
 
@@ -288,6 +304,8 @@ It is a descriptive dimension, not a mandate for bleakness.
 
 ## Surprise Construction Procedure
 
+*Basis: [@narrative-surprise]*
+
 For an intended twist:
 
 ```text
@@ -319,6 +337,8 @@ unexpected because the writer invented new information at the end.
 
 ## Surprise Red-Team
 
+*Basis: [@narrative-surprise]*
+
 Before accepting a twist, attack it.
 
 Ask:
@@ -339,6 +359,8 @@ Reject fake surprise.
 ---
 
 ## Surprise Research Caution
+
+*Basis: [@narrative-surprise]*
 
 Research on mystery endings found reader preference for surprise was associated with:
 

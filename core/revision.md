@@ -120,6 +120,8 @@ Only now optimize:
 
 ## Common Human / Novice Writer Mistake Audit
 
+*Basis: [@reedsy-novice-mistakes], [@lott-novice-mistakes], [@ebsco-teaching-cw], [@wd-exposition-early], [@wd-pov]*
+
 These are recurring problems reported by editors, teachers, and writing coaches.
 They are not universal laws and are not empirical prevalence estimates.
 

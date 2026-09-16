@@ -18,6 +18,8 @@ What the reader is feeling, tracking, and able to picture — as a changing stat
 
 ## Reader-State Model
 
+*Basis: [@human-level-narratives]*
+
 Captivation is a changing state, not a constant maximum.
 
 Track:
@@ -60,6 +62,8 @@ Variation is the point.
 
 ## Affect Curve
 
+*Basis: [@human-level-narratives]*
+
 Track at least:
 
 ```text
@@ -89,6 +93,8 @@ Emotional trajectories may end:
 ---
 
 ## Reader Situation Model
+
+*Basis: [@event-indexing]*
 
 Readers build an internal model of story events.
 
@@ -128,6 +134,8 @@ Use this deliberately.
 
 ## Narrative Transportation
 
+*Basis: [@green-brock-2000], [@van-laer-2014]*
+
 A captivating story should make it easy for the reader to mentally enter and remain in the
 story world.
 
@@ -143,6 +151,8 @@ Use transportation as a reader-state lens, not a prose-style command.
 ---
 
 ## Transportation Prerequisites
+
+*Basis: [@green-brock-2000], [@van-laer-2014]*
 
 Check:
 
@@ -224,6 +234,8 @@ This allows structural complexity without fog.
 ---
 
 ## Event-Level Flow, Not Token Predictability
+
+*Basis: [@fiction-flows]*
 
 Do not optimize story flow using simple sentence-level predictability alone.
 

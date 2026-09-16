@@ -18,6 +18,8 @@ Choosing an ending family, and closing the story's contract without writing its 
 
 ## Ending Search
 
+*Basis: [@critics]*
+
 When the ending is not fixed, generate multiple ending families.
 
 Examples:

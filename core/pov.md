@@ -18,6 +18,8 @@ Whose mind the reader stands in, and how close. Knowledge boundaries on the page
 
 ## POV and Psychic Distance Engine
 
+*Basis: [@unr-psychic-distance], [@stanford-psychic-distance], [@wd-pov]*
+
 POV is not only who narrates.
 It is **how close the reader is allowed to stand to a consciousness**.
 

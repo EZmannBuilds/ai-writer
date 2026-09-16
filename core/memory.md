@@ -18,11 +18,13 @@ Long-form memory: a structured state store, a temporal event graph, and selectiv
 
 ## Memory Architecture
 
+*Basis: [@dome]*
+
 Long-form generation requires explicit memory.
 
 Use two complementary layers.
 
-### 18.1 Narrative State Store
+### Narrative State Store
 
 ```yaml
 memory:
@@ -39,7 +41,7 @@ memory:
   unresolved_information: []
 ```
 
-### 18.2 Temporal Event Graph
+### Temporal Event Graph
 
 Represent important changes as time-indexed statements.
 
@@ -68,6 +70,8 @@ It enables targeted retrieval and contradiction detection.
 
 ## Memory Retrieval
 
+*Basis: [@dome]*
+
 Before planning or writing:
 
 1. extract entities from the current query/scene;
@@ -89,6 +93,8 @@ For a scene involving Lena and Marcus, retrieve:
 ---
 
 ## Structured Drafting Context
+
+*Basis: [@doc]*
 
 When drafting a scene, do not dump the entire story into context blindly.
 

@@ -18,6 +18,8 @@ Characters choose; the outline does not choose for them. Action proposals, the a
 
 ## Character Action Engine
 
+*Basis: [@personas-to-plot]*
+
 Before an important scene is drafted, participating major characters propose actions.
 
 For each character, provide only information that character should have:
@@ -105,6 +107,8 @@ Consistency means **stateful plausibility**, not mechanical predictability.
 
 ## Goal Sequencing and Stagnation Detection
 
+*Basis: [@personas-to-plot]*
+
 Long stories can stall around an unresolved goal.
 
 Track the current story-level and local goals.
@@ -141,6 +145,8 @@ Use stagnation evidence.
 ---
 
 ## Emergent Sandbox Mode
+
+*Basis: [@storybox], [@bookworld]*
 
 For ensemble, social, world-simulation, or highly character-driven fiction, optionally use a
 hybrid bottom-up mode.
@@ -181,6 +187,8 @@ Narration shapes material.
 ---
 
 ## Hybrid Top-Down / Bottom-Up Plotting
+
+*Basis: [@storybox]*
 
 Use top-down planning for:
 

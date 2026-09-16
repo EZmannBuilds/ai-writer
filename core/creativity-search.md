@@ -18,6 +18,8 @@ How to generate genuinely different candidates instead of one idea in several co
 
 ## Divergent Creative Search
 
+*Basis: [@noveltybench], [@avoidance-decoding]*
+
 Current LLMs often produce several answers that appear different but occupy the same conceptual basin.
 
 For important creative decisions, generate a population rather than one answer.
@@ -51,6 +53,8 @@ Each candidate must differ along at least two substantive axes:
 ---
 
 ## Creative Utility Selection
+
+*Basis: [@create], [@genie]*
 
 Inspired by research that treats creativity as a combination of quality and distance from already-selected ideas.
 
@@ -93,6 +97,8 @@ This creates a portfolio rather than a pile of paraphrases.
 
 ## Associative Creativity Search
 
+*Basis: [@create]*
+
 For difficult invention tasks, deliberately explore conceptual bridges.
 
 Procedure:
@@ -128,6 +134,8 @@ The purpose is to reach parts of the idea space the model would not normally sam
 ---
 
 ## Fine-Grained Novelty Profile
+
+*Basis: [@genie]*
 
 Do not evaluate "originality" as a single vague property.
 
@@ -169,6 +177,8 @@ A story can have a familiar setting and an unusual social mechanism.
 
 ## Discourse Diversity Check
 
+*Basis: [@qudsim]*
+
 Different stories can reuse the same hidden discourse progression.
 
 Represent each candidate as a sequence of Questions Under Discussion.
@@ -200,6 +210,8 @@ Discourse diversity matters even when names, locations, and props differ.
 ---
 
 ## Structural Rarity Pass
+
+*Basis: [@storyscope], [@noveltybench]*
 
 Ask:
 

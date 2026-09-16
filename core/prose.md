@@ -90,9 +90,11 @@ The question remains:
 
 ## Show–Tell Decision Engine
 
+*Basis: [@friedman-show-tell], [@kole-show-tell], [@storyscope]*
+
 "Show, don't tell" is useful only when it is treated as a **control dial**, not a ban on summary.
 
-### 85.1 Prefer showing when the reader should EXPERIENCE:
+### Prefer showing when the reader should EXPERIENCE:
 
 - a consequential choice;
 - a relationship shift;
@@ -104,7 +106,7 @@ The question remains:
 - a setting detail that reveals character;
 - the exact behavior that makes a claim believable.
 
-### 85.2 Prefer telling / summary when the reader only needs to KNOW:
+### Prefer telling / summary when the reader only needs to KNOW:
 
 - routine actions;
 - connective travel;
@@ -114,7 +116,7 @@ The question remains:
 - background that would be tedious as full scene;
 - information whose dramatization would steal emphasis from the real scene.
 
-### 85.3 Show, then tell
+### Show, then tell
 
 Useful in speculative, technical, historical, or unfamiliar settings:
 
@@ -126,7 +128,7 @@ reader experiences strange thing
 
 This is usually stronger than explaining the rule before the reader has a reason to care.
 
-### 85.4 Telling can carry voice
+### Telling can carry voice
 
 "Tell" does not mean "write neutrally."
 
@@ -138,7 +140,7 @@ Summary can reveal:
 - cultural assumptions;
 - retrospective judgment.
 
-### 85.5 Avoid body-language pantomime
+### Avoid body-language pantomime
 
 Do not translate every emotion into:
 - clenched jaw;
@@ -167,7 +169,7 @@ Sometimes the strongest line is simply:
 
 Direct naming is allowed when it has more force than another generic physiological cue.
 
-### 85.6 Do not tell after a successful show
+### Do not tell after a successful show
 
 If action/dialogue/image already makes the meaning legible, resist immediately explaining it.
 
@@ -184,6 +186,8 @@ If yes, delete or transform at least one layer unless repetition is intentionall
 ---
 
 ## Specificity Without Inventory
+
+*Basis: [@reedsy-novice-mistakes], [@lott-novice-mistakes]*
 
 Common weak description is generic:
 
@@ -236,6 +240,8 @@ If no, either remove it or move to a more appropriate narrator distance.
 ---
 
 ## Reader-Trust / Redundancy Audit
+
+*Basis: [@ebsco-teaching-cw]*
 
 Strong prose often leaves a small amount of work for the reader.
 

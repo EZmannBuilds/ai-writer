@@ -67,6 +67,8 @@ If yes to the last question, the twist may be decorative.
 
 ## Foreshadowing vs Warning
 
+*Basis: [@suspense-planning]*
+
 Before a planned failure or revelation, decide whether clues should:
 
 - be invisible until retrospect;
@@ -80,6 +82,8 @@ Do not foreshadow every event in the same way.
 ---
 
 ## Exposition and Backstory: Need-to-Know Routing
+
+*Basis: [@friedman-backstory], [@reedsy-exposition], [@wd-exposition-early]*
 
 Backstory is not bad.
 Exposition is not bad.
@@ -127,6 +131,8 @@ Do not default to characters reciting shared history to each other.
 ---
 
 ## Setup / Payoff Ledger
+
+*Basis: [@scriptmag-setup-payoff], [@friedman-setup-payoff]*
 
 A setup is a promise.
 A payoff is the later use, transformation, inversion, or consequence of that promise.

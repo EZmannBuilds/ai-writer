@@ -40,6 +40,8 @@ Relationship trajectories must persist across scenes.
 
 ## Social-State Propagation
 
+*Basis: [@bookworld], [@storybox]*
+
 For stories with communities, institutions, teams, families, courts, schools, workplaces,
 politics, or factions, track social information separately.
 
