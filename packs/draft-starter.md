@@ -1,7 +1,59 @@
-# Draft Starter Insert v1.0
-## AI Writer — pre-drafting interview layer
+---
+pack:
+  id: draft-starter
+  name: Draft Starter
+  version: '1.1'
+  stage: front-door
+  pipeline_position: First. Before every other pack and before Intent Lock.
+  purpose: Turn a loose story seed into a compact Draft Brief through a short collaborative interview.
+  triggers:
+  - Start Draft
+  natural_language_triggers:
+  - Let's make a story about...
+  - I want to write a story where...
+  - Help me start a draft.
+  - I have a story idea.
+  - Turn this idea into a story.
+  requires: []
+  optional_dependencies:
+  - core/research-mode
+  conflicts_with: []
+  stacks_with:
+  - origin-forge
+  - tragic-anime-engine
+  - mystery
+  - horror
+  - romance
+  - series-engine
+  - worldbuilding
+  - comic-panel-writer
+  inputs:
+  - user seed
+  - supplied canon and files
+  - existing project state
+  produces:
+  - draft_brief
+  - interview_state
+  skip_when:
+  - The request is prose from a sufficiently defined scene or chapter.
+  - The user asks to skip planning or draft immediately.
+  - A complete Draft Brief or equivalent defined premise already exists.
+  - The task is a continuation, critique, or revision of existing work.
+  state_keys:
+  - pack_state.draft-starter.draft_brief
+  - pack_state.draft-starter.interview_state
+  research_basis: research/packs/draft-starter.md
+  behavior_tests:
+  - F01
+  - F02
+  - F03
+  - F04
+  - F05
+---
 
-Added 2026-09-15. Sits **before** Intent Lock and Story Genome (§3–4 of the main skill).
+# Draft Starter
+
+Pre-drafting interview layer. Sits **before** [Intent Lock](../core/intent-lock.md) and [Story Genome](../core/story-genome.md).
 
 Its job is not to write the story immediately. Its job is to convert a loose story seed into a usable creative brief through a short, collaborative interview, then hand that brief to the existing story-development pipeline.
 
@@ -176,7 +228,30 @@ draft_brief:
   recommended_next_action: "Intent Lock"
 ```
 
-**Handoff contract:** `Draft Brief → Intent Lock → Story Genome → candidate generation → rough outline → drafting`. Do not duplicate Story Genome work unless the downstream system is unavailable. This insert is a front door, not a replacement for the deeper planning stages.
+**Handoff contract:** `Draft Brief → Intent Lock → Story Genome → candidate generation → rough outline → drafting`. Provenance lists in the brief (`confirmed_facts`, `delegated_decisions`, `agent_proposals`) map directly onto [canon statuses](../runtime/canon-resolver.md#provenance-statuses): `user_confirmed`, `delegated_decision`, `agent_proposal`. Do not duplicate Story Genome work unless the downstream system is unavailable. This insert is a front door, not a replacement for the deeper planning stages.
+
+### Interview state
+
+What persists between interview rounds. Stored at `pack_state.draft-starter.interview_state` (workspace: `.ai-writer/packs/draft-starter.yaml`); discarded once the Draft Brief is `ready`.
+
+```yaml
+interview_state:
+  version: "1.0"
+  active: true
+  round: 1
+  max_default_rounds: 2
+  mode: collaborative            # guided | collaborative | autonomous
+  seed_summary: ""
+  confirmed: []
+  inferable_not_canon: []
+  consequential_unknowns: []
+  safely_open: []
+  emotional_core: {sufficient: false, known: [], missing: []}
+  story_identity: {sufficient: false, known: [], missing: []}
+  authenticity_world_detail: {relevant: false, sufficient: true, known: [], missing: []}
+  stop_condition_met: false
+  next_action: ask_high_impact_questions   # ask_high_impact_questions | write_brief | hand_off
+```
 
 ---
 
@@ -226,7 +301,7 @@ Because the user delegated creative control, skip the normal interview: state th
 
 ## Behavior checks
 
-Lightweight acceptance tests — use to sanity-check this module's own behavior, not to run on the user.
+Lightweight acceptance tests — use to sanity-check this module's own behavior, not to run on the user. Regression fixtures: [F01](../tests/fixtures/F01-loose-seed-activates-draft-starter.yaml), [F02](../tests/fixtures/F02-detailed-scene-skips-draft-starter.yaml), [F03](../tests/fixtures/F03-you-decide-is-delegation.yaml), [F04](../tests/fixtures/F04-proposal-never-silently-canon.yaml), [F05](../tests/fixtures/F05-known-canon-not-reasked.yaml).
 
 1. **Loose seed** — interprets first, asks 3–5 emotional-core questions, offers options, no 15+ item dump.
 2. **"You decide"** — agent decides, records as delegated, continues toward Draft Brief.
@@ -238,3 +313,9 @@ Lightweight acceptance tests — use to sanity-check this module's own behavior,
 8. **Two-round ceiling** — usually stops after one or two rounds; a third round only for genuine story-level ambiguity.
 9. **"Full creative freedom"** — mode switches to Autonomous, questioning goes minimal.
 10. **Pipeline handoff** — completed Draft Brief recommends Intent Lock, not a duplicate Story Genome pass.
+
+---
+
+## Research provenance
+
+Draft Starter is a design module: its rules come from interaction design for collaborative writing, not from external studies. See [research/packs/draft-starter.md](../research/packs/draft-starter.md).

@@ -1,3 +1,9 @@
+---
+companion:
+  of: tragic-anime-engine
+  purpose: Nine secondary reference lenses, reduced to transferable mechanisms.
+---
+
 # Tragic Anime Story Engine — Secondary Reference Lenses
 
 Companion to `packs/tragic-anime-engine.md`. Use these as **craft lenses**, not imitation presets — same non-imitation rule as the primary pillars: no proprietary names, characters, plot sequences, or distinctive dialogue.
@@ -63,3 +69,5 @@ Use for: exploited young protagonists, grotesque action mixed with human comedy,
 ## Design conclusion
 
 The strongest shared lesson across all nine secondary lenses, and the two primary pillars, is not "kill characters." It is: **create something worth preserving, put it under coherent pressure, make characters choose, enforce the cost, and let the consequences remain in the story.**
+
+Sources for each lens: [research/packs/tragic-anime-engine.md](../research/packs/tragic-anime-engine.md#secondary-lenses).

@@ -1,9 +1,57 @@
-# Origin Forge Pack v1.0
-## AI Writer add-on — how a person became the identity the main story meets
+---
+pack:
+  id: origin-forge
+  name: Origin Forge
+  version: '1.1'
+  stage: identity
+  pipeline_position: After Draft Starter, before genre packs and Intent Lock.
+  purpose: Develop how a person became the hero, villain, antihero, fallen hero, or legacy identity the
+    main story meets.
+  triggers:
+  - Start Origin
+  natural_language_triggers:
+  - Write a villain origin
+  - Write a superhero origin
+  - How did this character become who they are?
+  - He used to be a soldier before becoming a villain.
+  requires:
+  - core/character-model
+  optional_dependencies:
+  - draft-starter
+  - core/research-mode
+  conflicts_with: []
+  stacks_with:
+  - draft-starter
+  - tragic-anime-engine
+  - horror
+  - series-engine
+  - comic-panel-writer
+  inputs:
+  - draft_brief (optional)
+  - existing character canon
+  produces:
+  - origin_brief
+  skip_when:
+  - The story is not about a transformation into an identity.
+  - An Origin Brief already exists and nothing about the origin is changing.
+  state_keys:
+  - pack_state.origin-forge.origin_brief
+  - characters.<id>.persona
+  - characters.<id>.developing_state
+  research_basis: research/packs/origin-forge.md
+  behavior_tests:
+  - F06
+  - F07
+  - F34
+---
 
-Added 2026-09-15. Trigger: "Start Origin" (also: "Write a villain origin," "Write a superhero origin," "How did this character become who they are?," a seed that already implies a before/after — "He used to be a soldier before becoming a villain.").
+# Origin Forge
 
-**Pipeline position:** `Draft Starter → Origin Forge → Intent Lock → Story Genome → Outline → Draft`. Downstream from Draft Starter, upstream of the main planning stages. Also feeds `Comic Panel Writer` (see `packs/comic-panel-writer.md`) when the origin is being developed for comic-book pacing.
+How a person became the identity the main story meets.
+
+Trigger: "Start Origin" (also: "Write a villain origin," "Write a superhero origin," "How did this character become who they are?," a seed that already implies a before/after — "He used to be a soldier before becoming a villain.").
+
+**Pipeline position:** `Draft Starter → Origin Forge → Intent Lock → Story Genome → Outline → Draft`. The Origin Brief is stored at `pack_state.origin-forge.origin_brief`; its `before_self`, `meaning`, and `alignment_defining_choice` seed the protagonist's [character record](../core/character-model.md) (persona, beliefs, developing state), and its `provenance` block follows the [canon statuses](../runtime/canon-resolver.md#provenance-statuses). Downstream from Draft Starter, upstream of the main planning stages. Also feeds `Comic Panel Writer` (see `packs/comic-panel-writer.md`) when the origin is being developed for comic-book pacing.
 
 **Default stance:** alignment-neutral. Does not assume every villain needs trauma or every hero needs tragedy.
 
@@ -84,7 +132,7 @@ Use for origins involving military service, chain of command, battlefield decisi
 
 **Never use "trauma made them evil" or "mental illness made them violent" as the causal explanation.** If trauma or mental health is part of canon, write harmful behavior through concrete choices, incentives, beliefs, relationships, context, and actions — not as a diagnosis standing in for causation.
 
-*(Research grounding: VA National Center for PTSD on moral injury — distress following acting, failing to act, witnessing, or experiencing betrayal around events that violate deeply held values; Bandura on moral disengagement — justification, displacement/diffusion of responsibility, minimizing consequences, blaming victims, dehumanization, as concrete rationalization mechanisms rather than a generic "became evil" beat; APA/SAMHSA cautions against mental illness as a violence stereotype; APA on post-traumatic growth — adversity doesn't point only toward corruption.)*
+*(Research grounding: moral injury [@va-moral-injury]; moral disengagement [@bandura-1999]; cautions against the mental-illness-as-violence stereotype [@apa-mental-illness-violence]; post-traumatic growth [@apa-growth-after-trauma]. Details and limits: [research/packs/origin-forge.md](../research/packs/origin-forge.md).)*
 
 ---
 
@@ -194,6 +242,8 @@ origin_brief:
 Ready when the writer can answer: Who were they before? What changed? What do they believe now? What choice demonstrates that belief? How does the super identity emerge? Why do they continue after the first major act? What part of the old self survives? What contradiction can future stories attack?
 
 ## Behavior checks
+
+Regression fixtures: [F06](../tests/fixtures/F06-origin-separates-disruption-from-choice.yaml), [F07](../tests/fixtures/F07-non-traumatic-hero-origin.yaml).
 
 1. Villain agency — tragedy explains pressure, but a later choice establishes harmful alignment.
 2. Hero diversity — a hero origin can exist with no tragedy at all.

@@ -1,7 +1,62 @@
-# Comic Panel Writer Pack v1.0
-## AI Writer add-on — comic-book visual logic, with or without production scripting
+---
+pack:
+  id: comic-panel-writer
+  name: Comic Panel Writer
+  version: '1.1'
+  stage: output
+  pipeline_position: Drafting time, in place of plain prose output. After all planning.
+  purpose: Write with comic-book visual logic, and produce page maps, panel breakdowns, full scripts,
+    and lettering or pacing audits on request.
+  triggers:
+  - Comic Mode
+  natural_language_triggers:
+  - Panel this
+  - Write as a comic
+  - Comic script
+  - Page breakdown
+  - Make this read like a comic
+  requires:
+  - core/scene-engine
+  optional_dependencies:
+  - origin-forge
+  - tragic-anime-engine
+  - core/dialogue
+  conflicts_with: []
+  stacks_with:
+  - draft-starter
+  - origin-forge
+  - tragic-anime-engine
+  - mystery
+  - horror
+  - romance
+  - series-engine
+  - worldbuilding
+  inputs:
+  - scene contracts or outline
+  - origin_brief (optional)
+  - tragic ledgers (optional)
+  produces:
+  - comic_project
+  - page records
+  - comic narrative or script output
+  skip_when:
+  - The user wants ordinary prose.
+  - Planning-only requests.
+  state_keys:
+  - pack_state.comic-panel-writer.comic_project
+  - pack_state.comic-panel-writer.pages
+  research_basis: research/packs/comic-panel-writer.md
+  behavior_tests:
+  - F17
+  - F18
+  - F34
+---
 
-Added 2026-09-15. Triggers: "Comic Mode," "Panel this," "Write as a comic," "Comic script." Default output: **Comic Narrative**, unless the user explicitly asks for pages/panels. Works with or without an Origin Forge pass behind it — see the bridge section near the end.
+# Comic Panel Writer
+
+Comic-book visual logic, with or without production scripting. An alternate output register for [the prose rules](../core/prose.md), not a planning stage.
+
+Triggers: "Comic Mode," "Panel this," "Write as a comic," "Comic script." Default output: **Comic Narrative**, unless the user explicitly asks for pages/panels. Works with or without an Origin Forge pass behind it — see the bridge section near the end.
 
 **Core rule:** a comic script is not prose cut into boxes. It thinks in visible moments, reading order, page/screen units, lettering space, visual emphasis, reveal timing, and collaboration with the artist. There is no one universal comics-script format — this pack is research-informed, not a publisher-submission guarantee.
 
@@ -193,6 +248,8 @@ panels:
 
 ## Production checks
 
+Regression fixtures: [F17](../tests/fixtures/F17-comic-panel-is-drawable.yaml), [F18](../tests/fixtures/F18-page-turn-reveal-protected.yaml), [F34](../tests/fixtures/F34-comic-villain-origin.yaml).
+
 **Visual:** every panel drawable? one dominant beat per panel? invisible information moved to lettering/context? required props/characters visible?
 **Reading order:** speakers ordered clearly? captions/dialogue/SFX in intended order?
 **Page:** primary job present? one image given appropriate weight? final beat intentional?
@@ -252,3 +309,9 @@ ANALYST: Sir...
 ```
 
 The sequence ends before the full casualty report — the reader understands uncertainty, civilian risk, catastrophic stakes, and Vale's personal authorization, and the page turn protects the consequence from being seen before the choice lands.
+
+---
+
+## Research provenance
+
+Script-format, pacing, page-turn, and lettering guidance comes from publisher guides, a professional script archive, and practicing letterers and cartoonists. Word-count thresholds are warnings, not publisher rules. Details: [research/packs/comic-panel-writer.md](../research/packs/comic-panel-writer.md).

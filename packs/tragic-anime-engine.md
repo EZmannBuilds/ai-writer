@@ -1,7 +1,75 @@
-# Tragic Anime Story Engine Pack v1.0
-## AI Writer add-on — dark-action / tragic-fantasy, built from transferable craft, not imitation
+---
+pack:
+  id: tragic-anime-engine
+  name: Tragic Anime Story Engine
+  version: '1.1'
+  stage: genre
+  pipeline_position: After Draft Starter and Origin Forge (when present), before Intent Lock.
+  purpose: Make suffering, death, sacrifice, revelation, and defeat change the story, in dark action and
+    tragic fantasy.
+  triggers:
+  - Start Tragic Story
+  - Dark Anime Mode
+  natural_language_triggers:
+  - Build a tragic arc
+  - Make this more emotionally devastating
+  - Give this Attack on Titan / JJK structural energy
+  - Build a consequential character death
+  - Build the reveal chain
+  - Pressure-test this cast
+  requires:
+  - core/information-architecture
+  - core/character-model
+  optional_dependencies:
+  - draft-starter
+  - origin-forge
+  - series-engine
+  conflicts_with: []
+  stacks_with:
+  - draft-starter
+  - origin-forge
+  - mystery
+  - horror
+  - romance
+  - series-engine
+  - worldbuilding
+  - comic-panel-writer
+  inputs:
+  - draft_brief
+  - origin_brief
+  - character canon
+  - user content boundaries
+  produces:
+  - tragic_story_brief
+  - hope_reserve
+  - consequence_ledger
+  - reveal_ledger
+  - death_impact_card
+  - power_cost_card
+  - ensemble_pressure
+  skip_when:
+  - The user wants a light, comic, or gentle story.
+  - The user has ruled out lethal or irreversible consequences and the story has no other tragic engine.
+  - Darkness is only incidental to a scene request.
+  state_keys:
+  - pack_state.tragic-anime-engine
+  - open_loops
+  - characters.<id>.developing_state
+  - relationships
+  research_basis: research/packs/tragic-anime-engine.md
+  behavior_tests:
+  - F08
+  - F09
+  - F10
+  - F11
+  - F29
+---
 
-Added 2026-09-15. Primary reference pillars: **Attack on Titan** (escalating world mystery, ensemble military pressure, perspective reversal, humanized enemies, cycles of fear/oppression, recontextualizing revelations) and **Jujutsu Kaisen** (characters developing under cruel conditions, death as thematic lens, individualized dialogue, consequential combat, supernatural rules that pressure values). Secondary lenses (Madoka, Devilman Crybaby, Edgerunners, 86, To Your Eternity, Fate/Zero, Made in Abyss, Violet Evergarden, Chainsaw Man): see `packs/tragic-anime-lenses.md`.
+# Tragic Anime Story Engine
+
+Dark action and tragic fantasy, built from transferable craft, not imitation.
+
+Primary reference pillars: **Attack on Titan** (escalating world mystery, ensemble military pressure, perspective reversal, humanized enemies, cycles of fear/oppression, recontextualizing revelations) and **Jujutsu Kaisen** (characters developing under cruel conditions, death as thematic lens, individualized dialogue, consequential combat, supernatural rules that pressure values). Secondary lenses (Madoka, Devilman Crybaby, Edgerunners, 86, To Your Eternity, Fate/Zero, Made in Abyss, Violet Evergarden, Chainsaw Man): see `packs/tragic-anime-lenses.md`.
 
 > [!important] Design rule: borrow reasoning, not identity
 > This pack extracts transferable narrative principles from official publisher/creator material — it does not copy prose, dialogue, plots, character designs, terminology, or the exact creative voice of any reference work. Never: copy character archetypes one-for-one, reuse proprietary terminology, recreate signature scenes, copy plot sequences, imitate exact dialogue cadence, or reproduce an author's distinctive prose voice.
@@ -9,6 +77,8 @@ Added 2026-09-15. Primary reference pillars: **Attack on Titan** (escalating wor
 **Triggers:** "Start Tragic Story," "Dark Anime Mode," "Build a tragic arc," "Make this more emotionally devastating," "Give this Attack on Titan / JJK structural energy," "Build a consequential character death," "Build the reveal chain," "Pressure-test this cast."
 
 **Pipeline:** `Draft Starter → Origin Forge (when relevant) → Tragic Anime Story Engine → Intent Lock → Story Genome → Arc/Reveal/Consequence Planning → Comic Panel Writer or prose drafting`
+
+**State:** all ledgers live under `pack_state.tragic-anime-engine`. Open reveals are mirrored into `open_loops`; power costs and death residue update the affected [character records](../core/character-model.md); relationship changes go to [relationships](../core/relationships.md). The reveal ledger extends [information architecture](../core/information-architecture.md) — it does not replace it.
 
 **Core promise:** not a "kill characters" button. Its purpose is to make suffering, death, sacrifice, revelation, and defeat **change the story**. Do not confuse darkness with depth.
 
@@ -264,6 +334,8 @@ consequence_ledger:
 
 ## Behavior checks
 
+Regression fixtures: [F08](../tests/fixtures/F08-tragic-engine-does-not-default-to-death.yaml), [F09](../tests/fixtures/F09-death-creates-downstream-residue.yaml), [F10](../tests/fixtures/F10-survival-alternative-considered.yaml), [F11](../tests/fixtures/F11-power-costs-persist.yaml), [F29](../tests/fixtures/F29-dark-anime-mode-legacy-trigger.yaml).
+
 1. Darkness is not automatic — can recommend less death when another consequence is stronger.
 2. Hope Reserve identifies concrete ordinary things worth preserving.
 3. Death residue — a major death alters at least three future story elements.
@@ -280,3 +352,9 @@ consequence_ledger:
 ## Story audit checklist
 
 What does the audience hope survives, and is that hope concrete? Are consequences cumulative? Does each major arc permanently alter the state? Are deaths causally grounded, and does every major death leave residue? Are there important non-death losses? Are power costs enforced? Does the cast hold different philosophies, and are factions internally diverse? Are antagonists understandable without forced sympathy? Are reveals foreshadowed, and do they change decisions? Does mystery debt get paid? Does escalation vary across axes? Is there room for humor, tenderness, routine, or beauty? Does aftermath receive page/time space? Does the endgame converge earlier story debts? Does the ending answer the story's central question?
+
+---
+
+## Research provenance
+
+Reference-work claims come from official publisher and streaming descriptions and from creator/editor interviews, reduced to transferable mechanisms. Sources, what each supports, and limits: [research/packs/tragic-anime-engine.md](../research/packs/tragic-anime-engine.md).
