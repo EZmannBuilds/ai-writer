@@ -1,6 +1,6 @@
 ---
 name: ai-writer
-version: 0.6
+version: 0.7
 status: modular-runtime
 license: CC-BY-NC-4.0
 description: A research-informed fiction-writing system for psychologically deep, structurally coherent, distinctive fiction. Use for any fiction task — story ideas, scenes, chapters, novels, series, origins, comics, mysteries, horror, romance, tragic/dark stories, worldbuilding, continuation of an existing project, critique, and revision. Loads only the machinery a task needs; keeps canon, character knowledge, and agent proposals separate.
@@ -109,7 +109,7 @@ State can persist in an optional `.ai-writer/` folder in the user's project ([ru
 
 ### Canon and provenance
 
-Every fact carries provenance: user-confirmed, source-file canon, approved inference, delegated decision, agent proposal, uncertain, in-world belief, alternate continuity, deprecated, retcon. When facts conflict, [the canon resolver](runtime/canon-resolver.md) decides what wins, and intentional contradictions are never "fixed."
+Every fact carries provenance: user-confirmed, source-file canon, approved inference, delegated decision, agent proposal, uncertain, in-world belief, character belief, alternate continuity, deprecated, retcon. When facts conflict, [the canon resolver](runtime/canon-resolver.md) decides what wins, and intentional contradictions are never "fixed."
 
 ---
 
@@ -122,6 +122,11 @@ Packs are optional add-ons. Each pack's front matter is its contract; the router
 | [draft-starter](packs/draft-starter.md) | front-door | "Start Draft", a loose seed | Turning a loose idea into a Draft Brief with a short interview. |
 | [origin-forge](packs/origin-forge.md) | identity | "Start Origin", "villain origin" | How someone became the hero, villain, or antihero the story meets. |
 | [tragic-anime-engine](packs/tragic-anime-engine.md) | genre | "Start Tragic Story", "Dark Anime Mode" | Dark action and tragic fantasy where loss changes the story. |
+| [mystery](packs/mystery.md) | genre | "Start Mystery", "whodunit" | Truth model, fair clue trail, suspects, false solutions, reveal. |
+| [horror](packs/horror.md) | genre | "Start Horror", "make this scary" | Dread curves, threat models, rule uncertainty, anti-default audit. |
+| [romance](packs/romance.md) | genre | "Start Romance", "slow burn" | Per-partner perception, love dimensions, disclosure, barriers, endings that fit. |
+| [series-engine](packs/series-engine.md) | scale | "Start Series", "plan season 2" | Promise stacks, long threads, escalation beyond bigger villains, convergence. |
+| [worldbuilding](packs/worldbuilding.md) | world | "Build World" | Causal society design that lands on people as cost and conflict. |
 | [comic-panel-writer](packs/comic-panel-writer.md) | output | "Comic Mode", "Panel this" | Comic-book visual logic, or real page/panel scripts. |
 
 Writing a new pack: [docs/PACK_AUTHORING.md](docs/PACK_AUTHORING.md).

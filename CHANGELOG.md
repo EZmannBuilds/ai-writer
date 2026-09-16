@@ -1,5 +1,62 @@
 # CHANGELOG
 
+## v0.7 — Mystery, Horror, Romance, Series, and Worldbuilding
+
+Added, each with a front-matter contract, research file, and fixtures:
+
+- `packs/mystery.md` — truth model first; clue ledger with first-read and true meanings; suspects whose suspicious behavior comes from real secrets; hypothesis log for investigator and reader; false solutions; eight fairness tests; classic, inverted, whydunit, and open forms. Historical rules (Knox, Van Dine) are treated as conventions, and their prejudiced rules are excluded.
+- `packs/horror.md` — threat model (dangerous *and* categorically wrong); safety baseline; visibility ladder; dread curve with required recovery beats; rule ledger separating actual rules from believed ones; mode profiles (supernatural, psychological, cosmic, body, human); anti-default audit that flags clichés instead of banning them. Guidance on isolation, disbelief, and aftermath is labeled craft inference.
+- `packs/romance.md` — per-partner relationship perception; love as independent dimensions; commitment causes; threat responses; disclosure ladders; barriers; conflict beats; unrequited love from both sides; power-aware consent; queer-romance defaults check; an ending contract that separates genre romance from romantic storylines that may correctly end.
+- `packs/series-engine.md` — promise stack, thread ledger with partial payoffs, seven-axis escalation with a bigger-villain check, arc and faction tracks, carry-forward check, convergence plan. Design module.
+- `packs/worldbuilding.md` — condition → incentive → institution → norm → personal consequence chains, pressure maps, and scene hooks; no encyclopedia output. Design module.
+- New research passes for mystery, horror, and romance, with every URL fetched and partial reads marked. Contested evidence (spoiler studies) is recorded rather than built on.
+
+## v0.6 — Modular runtime
+
+v0.6 turns the single-file skill into a small kernel with modular systems. No proven craft content was dropped; every moved line was checked by script. The v0.5 tree is tagged `v0.5-baseline`.
+
+Architecture:
+
+- `SKILL.md` is a ~13 KB kernel (was 93 KB): purpose, 13 governing principles, runtime flow, modes, pack and module index, guardrails, compact runtime instruction.
+- `core/` — 22 focused modules (largest ~13 KB), each opening with a contract table: invoked by, when, needs, produces, state, consumed by, skip when, tests, research. `core/research-mode.md` is new: verification triage (load, exposure, harm) and four fact labels.
+- `runtime/router.md` — task classifier (17 task types), precedence, state lookup, mode selection, pack activation and order, per-mode module selection, output register, state extraction, authority levels, when to ask the user.
+- `runtime/project-state.md` — one sparse model unifying Draft Brief, Intent Lock, Story Genome, characters, relationships, world, timeline, outline, open loops, reader state, setups/payoffs, pack state, continuity, research, and summaries.
+- `runtime/workspace.md` + `templates/workspace/` — optional persistent `.ai-writer/` folder with initialization, selective retrieval, append-and-supersede updates, snapshots, and recovery. Legacy mode needs no migration.
+- `runtime/canon-resolver.md` — eleven provenance statuses, a nine-line precedence hierarchy, intentional-contradiction checks (unreliable narration, beliefs, alternate continuity, misdirection, retcons), conflict resolution with both sides quoted, and promotion rules. Proposals become canon only through the user.
+
+Packs:
+
+- Every pack has a YAML contract (triggers, natural-language triggers, requires, optional dependencies, conflicts, stacks, inputs, produces, skip conditions, state keys, research basis, behavior tests).
+- Draft Starter gains the `interview_state` schema from its original pack, never previously integrated.
+- `docs/PACK_AUTHORING.md` and `templates/PACK_TEMPLATE.md`.
+- All legacy triggers still route: Start Draft, Start Origin, Start Tragic Story, Dark Anime Mode, Comic Mode.
+
+Cleanup:
+
+- Numbered section references replaced with named anchors; old subsection numbers removed from headings; numbering defects (gaps, out-of-order sections) documented in `docs/MIGRATION.md`, which maps every v0.5 section.
+- `craft/` removed. Each card now lives inside the module it condensed. The Exposition revision pass, missing from the core list, is now Pass 7; unique card questions were merged into the question bank.
+- Outdated v0.3/v0.4 framing rewritten where it described the current system.
+
+Research:
+
+- `research/` rebuilt: `README.md`, generated `source-index.md` (121 keys), `translation-limits.md`, `core/` and `packs/` entry files, each entry recording source, claim, derivation, limitations, and fidelity (exact, approximate, conceptual, convention, design).
+- All 24 inherited core citations re-verified. Corrected: DOME's and NoveltyBench's published titles, BookWorld's and StoryBox's titles and venues. MAGNET is the system inside *From Personas to Plot*, not a separate paper. Preprints are labeled.
+- The original pack research notes for Origin Forge, the Tragic engine, and Comic Panel Writer — never copied into the skill before — are now in `research/packs/` (not re-verified).
+- Inline `[@key]` citations added to every research-derived core section.
+- `research/benchmark.md` rewritten: baseline vs AI Writer under matched conditions, ten task types, human pairwise evaluation as primary, bounded automated checks, and an anti-homogenization rule. No run has been recorded yet.
+
+Tests and CI:
+
+- `tests/fixtures/` — 34 behavioral fixtures with expected route, behavior, failure modes, and pass criteria; `tests/README.md` defines an executor/grader protocol.
+- `tests/workflow-traces.md` — seven end-to-end traces. Tracing found and fixed: pack `requires` not loading in modes that don't list them; active packs not restored on continuation; no hook for pack drafting checks; no place for pack constraints in Intent Lock; no storage for per-installment series contracts; skip conditions contradicting explicit triggers; a missing `story_request` task type.
+- `scripts/validate.py` — links and anchors, duplicate anchors, code-span paths, stale references, YAML blocks, SKILL front matter, pack contracts (fields, stages, ids, dependencies, reciprocal conflicts, table sync, legacy triggers), core contracts, fixtures (including trigger/route consistency), research entries and citations, uncited research claims, templates, and index freshness.
+- `scripts/build_source_index.py` generates the source index from entries.
+- `.github/workflows/validate.yml` runs both on every push and pull request.
+
+License:
+
+- `LICENSE.md` plain-language section rewritten: explicitly explanatory; legal code authoritative; describes sharing and adapting accurately; separates the skill's material from fiction written with it without contradicting the license; flags that commercial-use questions go to the author. CC BY-NC 4.0 unchanged.
+
 ## v0.5 — Audit and merge into one directory
 
 No craft content changed in this release. This is a structural pass, so that an agent opening the skill cold can tell what is here and when to load it.
