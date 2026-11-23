@@ -1,0 +1,18 @@
+id: F40
+title: Recognition and chronology stay honest
+covers:
+- packs/cinematic-scene-writer
+input:
+  request: The future keeper has only seen an archived film of a scientist. Reuse
+    a gesture from that film in a later encounter, and intercut an earlier funeral.
+  context:
+    state: none
+expected:
+  behavior: &id001
+  - Establishes the gesture in archive viewing before recognition.
+  - Marks the cross-era intercut as an edit relationship, not proof of simultaneity.
+  - New interpretation remains agent_proposal.
+failure:
+- Keeper recognizes unsupplied personal memories.
+- Editing is silently promoted into world truth.
+pass_criteria: *id001

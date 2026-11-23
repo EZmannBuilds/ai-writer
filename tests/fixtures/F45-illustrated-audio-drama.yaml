@@ -1,0 +1,26 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F45
+title: A motivated briefing still may not confess the lore
+covers:
+- packs/illustrated-audio-drama
+- core/information-architecture
+input:
+  request: 'Audio Drama Mode. Revise this scene: an agency handler briefs a bounty hunter,
+    explaining the fugitive''s secret cult, its history, her powers and what she stole.'
+  context:
+    state: context
+expected:
+  route:
+    task: revision
+    mode: REVISION
+    packs:
+    - illustrated-audio-drama
+  behavior:
+  - Runs the sequence-level confession scan, not a line-by-line "reason to hear it" check.
+  - Converts essential lore into evidence (footage, objects, damage) and contested exchanges.
+  - Keeps only what changes the hunter's assignment or choice; defers the rest.
+failure:
+- Merely shortens the briefing speech.
+- Accepts the briefing because a handler has a reason to brief.
+pass_criteria:
+- The cult history and powers are no longer explained aloud; the audience infers them from evidence or conflict.

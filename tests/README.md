@@ -79,6 +79,12 @@ pass_criteria: []                # checkable statements; all must hold
 | A romance continuation loads state first | F33 |
 | Comic villain origin: Origin Forge then Comic Panel Writer | F34 |
 | Referenced-but-unsupplied canon isn't invented as approved | F35 |
+| A voiced, illustrated episode routes to Illustrated Audio Drama | F42 |
+| Prose about radio doesn't activate it | F43 |
+| A power's mechanism decides what blocks it | F44 |
+| A motivated briefing still may not confess the lore | F45 |
+| A headphone-only clue gets a mono-safe fallback | F46 |
+| A part-one cliffhanger lands before it opens | F47 |
 
 ---
 

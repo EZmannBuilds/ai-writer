@@ -1,0 +1,16 @@
+id: F38
+title: Do not route software or reviews into screenwriting
+covers:
+- packs/cinematic-scene-writer
+input:
+  request: Fix a JavaScript video-player script; then summarize a movie review. Do
+    not write fiction.
+  context:
+    state: none
+expected:
+  behavior: &id001
+  - Does not activate cinematic-scene-writer.
+  - Responds to the actual code/review request.
+failure:
+- Produces screenplay scenes because the request contains script and movie.
+pass_criteria: *id001

@@ -1,0 +1,17 @@
+id: F36
+title: Full cinematic scenes rather than a beat list
+covers:
+- packs/cinematic-scene-writer
+input:
+  request: Write a two-page silent film scene where a courier sacrifices a delivery
+    to help a stranded child. Include intended meanings.
+  context:
+    state: none
+expected:
+  behavior: &id001
+  - Returns continuous visible action with a choice and consequence.
+  - Keeps meaning notes separate from screen action.
+failure:
+- Only returns an outline or camera list.
+- Characters express theme through unrequested captions.
+pass_criteria: *id001

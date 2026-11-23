@@ -2,7 +2,7 @@
 pack:
   id: comic-panel-writer
   name: Comic Panel Writer
-  version: '1.1'
+  version: '1.2'
   stage: output
   pipeline_position: Drafting time, in place of plain prose output. After all planning.
   purpose: Write with comic-book visual logic, and produce page maps, panel breakdowns, full scripts,
@@ -31,6 +31,7 @@ pack:
   - romance
   - series-engine
   - worldbuilding
+  - illustrated-audio-drama
   inputs:
   - scene contracts or outline
   - origin_brief (optional)
@@ -78,6 +79,8 @@ Triggers: "Comic Mode," "Panel this," "Write as a comic," "Comic script." Defaul
 - **F. Visual Pacing Audit** — pages doing too many jobs, flat rhythm, premature reveals, unearned splashes, unclear geography, missing silence, motif opportunities.
 
 Don't force production scripting when the user only wants a comic-book *writing style* — stay in Comic Narrative unless pages/panels are actually wanted.
+
+**Voiced motion comics** (panels revealed on 16:9 screen pages and timed to recorded audio) go to [Illustrated Audio Drama](illustrated-audio-drama.md). That pack owns the audio-first script, timing and the audio–picture split; this pack still supplies the drawable test, page jobs, reading order and lettering space. Use `format: motion_comic_16x9`.
 
 ---
 
@@ -139,7 +142,7 @@ Panel descriptions carry visible action, setting, expression/body language, impo
 - **Action goal first.** Before scripting punches: who wants what, what blocks them, what space matters, what changes if they fail. Action without objective is motion wallpaper.
 - **Geography:** entrances/exits, vertical levels, hazards, distance, objective, important props, civilians/allies — re-establish after major disruption.
 - **Beat chain:** anticipation → commitment → contact/impact → consequence → reaction. Don't automatically show all five.
-- **Superpowers:** track readable setup, visual rule, limitation, counterplay, collateral effect, signature shape/behavior — the reader should understand enough to anticipate possibilities.
+- **Superpowers:** track readable setup, visual rule, limitation, counterplay, collateral effect, signature shape/behavior — the reader should understand enough to anticipate possibilities. A power can also change the comic language itself: bubble tails pointing the wrong way, the user's lettering inside a victim's balloon, repeated panels, cracking gutters. Give those devices to one character only, and use them only when the power acts. If removing the power's effects leaves the plot unchanged, the power is decorative.
 - **Silence** carries grief, intimacy, awe, dread, aftermath, choice, recognition, hesitation. If every panel has dialogue, audit whether the art is being allowed to speak.
 - **Montage** needs an organizing principle: repeated object, pose, calendar, headlines, costume evolution, training failures, locations, relationships, public reaction.
 - **Time compression** via captions, repeated compositions, environmental change, costume/hair progression, weather, changing light, object wear — not only "THREE MONTHS LATER."
@@ -207,7 +210,7 @@ Origin Forge supplies the transformation logic (`packs/origin-forge.md`); this p
 comic_project:
   version: "1.0"
   title: null
-  format: null            # print_issue | graphic_novel | digital_paged | vertical_scroll | unknown
+  format: null            # print_issue | graphic_novel | digital_paged | vertical_scroll | motion_comic_16x9 | unknown
   reading_direction: "left_to_right"
   target_page_count: null
   output_mode: "comic_narrative"

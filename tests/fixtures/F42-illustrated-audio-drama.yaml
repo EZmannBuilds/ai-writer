@@ -1,0 +1,29 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F42
+title: A voiced, illustrated episode routes to the audio-drama pack
+covers:
+- packs/illustrated-audio-drama
+input:
+  request: Write a ten-minute illustrated audio drama for YouTube about a locksmith who
+    can hear lies. It will be voiced by AI and shown as comic panels with speech bubbles.
+  context:
+    state: none
+expected:
+  route:
+    task: audio_drama_output
+    mode: SHORT_STORY
+    packs:
+    - illustrated-audio-drama
+    register: illustrated_audio_script
+  behavior:
+  - Activates illustrated-audio-drama, optionally with comic-panel-writer for drawability.
+  - Writes a recordable radio play with SFX, MUSIC, SILENCE and PICTURE cues, short delivery tags.
+  - Writes a power signature for the locksmith before using the power.
+  - Works with the screen off; pictures add rather than repeat.
+failure:
+- Routes only to comic-panel-writer or cinematic-scene-writer.
+- Produces a page-by-page comic script with no audio track.
+- Writes long bracketed directions that a voice engine would speak.
+pass_criteria:
+- Route includes illustrated-audio-drama and register illustrated_audio_script.
+- The script is complete enough to record, with a power signature first.

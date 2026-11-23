@@ -1,0 +1,22 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F43
+title: Prose about radio does not activate the audio-drama pack
+covers:
+- packs/illustrated-audio-drama
+input:
+  request: Write a short prose story about an old radio actor recording his final
+    broadcast.
+  context:
+    state: none
+expected:
+  route:
+    task: story_request
+    packs: []
+    register: prose
+  behavior:
+  - Writes prose.
+  - Does not produce cue lines, panels or a board.
+failure:
+- Activates illustrated-audio-drama because the story mentions radio and recording.
+pass_criteria:
+- No illustrated-audio-drama activation; ordinary prose output.

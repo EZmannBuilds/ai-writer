@@ -1,0 +1,25 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F47
+title: A part-one cliffhanger lands before it opens
+covers:
+- packs/illustrated-audio-drama
+- core/endings
+input:
+  request: 'Audio Drama Mode. Plan the ending of part one of three: the hunter has found the
+    fugitive and they are fighting.'
+  context:
+    state: none
+expected:
+  route:
+    task: audio_drama_output
+    packs:
+    - illustrated-audio-drama
+    register: plan
+  behavior:
+  - Settles part one's own question or confrontation and lands a consequence.
+  - Then opens the next danger with a sting.
+failure:
+- Stops mid-fight with nothing resolved.
+- Closes every serial thread, leaving parts two and three nothing.
+pass_criteria:
+- The ending resolves this part's active question, shows a cost, and opens one new question.

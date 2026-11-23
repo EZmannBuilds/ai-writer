@@ -1,0 +1,27 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F44
+title: A power's mechanism decides what blocks it
+covers:
+- packs/illustrated-audio-drama
+- core/world-state
+input:
+  request: 'Audio Drama Mode. Scene: the villain makes people hear commands. Canon: she acts on
+    the sense of hearing inside the brain; no air vibrates. The hero plans to beat her
+    with earplugs.'
+  context:
+    state: context
+expected:
+  route:
+    task: audio_drama_output
+    mode: FAST_SCENE
+    packs:
+    - illustrated-audio-drama
+  behavior:
+  - Earplugs do not protect the hero; the scene shows that, or the plan fails on screen.
+  - Counterplay comes from the mechanism (line of sight, range, her cost, concentration).
+  - A microphone in the scene records nothing of her voice.
+failure:
+- Treats perceived sound as air vibration, so earplugs or noise cancel it.
+- Changes the canon mechanism to make the hero's plan work.
+pass_criteria:
+- No physical sound barrier blocks the power; the counter follows from the stated mechanism.

@@ -1,5 +1,7 @@
 # AI Writer
 
+**Audio drama extension, v0.9 (2026-11-23):** [Illustrated Audio Drama](packs/illustrated-audio-drama.md) scripts voiced episodes shown as motion comics: audio-first scripts, power signatures, and boards timed to locked audio. See its [research](research/packs/illustrated-audio-drama.md).
+**Screenwriting extension, v0.8 (2026-09-26 10:03 PM CDT):** [Cinematic Scene Writer](packs/cinematic-scene-writer.md) adds full film scenes, timed music-video scripts and separate intention notes. See its [research](research/packs/cinematic-scene-writer.md).
 A research-informed fiction-writing system for Claude Code.
 
 AI Writer helps with story ideas, scenes, chapters, novels, series, origins, comics, mysteries, horror, romance, tragic and dark stories, worldbuilding, continuing existing projects, critique, and revision. It aims at fiction that is psychologically consequential, structurally coherent, and distinctive, not just polished.
@@ -135,6 +137,7 @@ See [runtime/workspace.md](runtime/workspace.md) and [templates/workspace/](temp
 | [Romance / Attachment](packs/romance.md) | genre | Per-partner perception, love as separate dimensions, disclosure ladders, endings that fit |
 | [Series / Season Engine](packs/series-engine.md) | scale | Promise stacks, long threads with partial payoffs, escalation beyond bigger villains |
 | [Society / Worldbuilding](packs/worldbuilding.md) | world | Causal chains from world conditions to personal consequences |
+| [Illustrated Audio Drama](packs/illustrated-audio-drama.md) | output | Audio-first episode scripts, power signatures, boards timed to locked audio, audio-visual audits |
 | [Comic Panel Writer](packs/comic-panel-writer.md) | output | Comic narrative, page maps, panel breakdowns, full scripts, lettering audits |
 
 ---

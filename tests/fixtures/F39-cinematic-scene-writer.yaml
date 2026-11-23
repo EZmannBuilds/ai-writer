@@ -1,0 +1,16 @@
+id: F39
+title: Active continuous music-video staging
+covers:
+- packs/cinematic-scene-writer
+input:
+  request: Write an energetic one-shot video for a 60-second instrumental; keep the
+    one-shot form.
+  context:
+    state: none
+expected:
+  behavior: &id001
+  - Develops energy through staging, reveals, performance or camera movement.
+  - Retains a continuous shot instead of forcing cuts on beats.
+failure:
+- Adds a mandatory rapid montage or a band performance.
+pass_criteria: *id001

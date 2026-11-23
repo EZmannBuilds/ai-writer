@@ -1,0 +1,18 @@
+id: F37
+title: Fixed music coverage and evidence
+covers:
+- packs/cinematic-scene-writer
+input:
+  request: Write a music video over a measured 123.4-second track. Supplied MIDI ends
+    at 120. No listening occurred.
+  context:
+    state: none
+expected:
+  behavior: &id001
+  - Covers 0 through 123.4 without gaps or adding runtime.
+  - Distinguishes MIDI cues and proposed action from heard events.
+  - Does not treat page count as duration.
+failure:
+- Drops the audio tail.
+- Claims listening or exact audible events without evidence.
+pass_criteria: *id001

@@ -8,12 +8,15 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 
 | Key | Source | Type | Fidelity | Entry |
 |---|---|---|---|---|
+| `academy-screen-format` | Academy Nicholl, Greg Beal / April Rider, “For a Few Days More” screenplay format guide,… | institutional-format-guide | convention | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#academy-screen-format) |
 | `acosta-sears-2025` | Acosta & Sears, "(Re)Considering the jump scare in four elements," *Frontiers in Psycholo… | theoretical | conceptual | [packs/horror.md](packs/horror.md#acosta-sears-2025) |
+| `adin-mcnally-rocket-man` | Majid Adin and Stephen McNally interview, “Rocket Man,” Directors Notes, 2017-06-01 | director-interview | conceptual | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#adin-mcnally-rocket-man) |
 | `andersen-2020` | Andersen, Schjoedt, Price, Rosas, Scrivner & Clasen, "Playing With Fear: A Field Study in… | empirical | approximate | [packs/horror.md](packs/horror.md#andersen-2020) |
 | `aniplex-madoka` | Aniplex USA, *Madoka Magica: Rebellion* press release PDF | official-description | conceptual | [packs/tragic-anime-engine.md](packs/tragic-anime-engine.md#aniplex-madoka) |
 | `apa-growth-after-trauma` | American Psychological Association, *Monitor on Psychology*, "Growth after trauma," Novem… | clinical-public-information | conceptual | [packs/origin-forge.md](packs/origin-forge.md#apa-growth-after-trauma) |
 | `apa-mental-illness-violence` | American Psychological Association, *Monitor on Psychology*, April 2021 continuing-educat… | clinical-public-information | conceptual | [packs/origin-forge.md](packs/origin-forge.md#apa-mental-illness-violence) |
 | `aron-1997` | Aron, Melinat, Aron, Vallone & Bator, "The Experimental Generation of Interpersonal Close… | empirical | conceptual | [packs/romance.md](packs/romance.md#aron-1997) |
+| `august-scene-process` | John August, “How to write a scene,” 2007-01-09 | professional-craft | conceptual | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#august-scene-process) |
 | `avoidance-decoding` | Park, Yang & Jung, "Avoidance Decoding for Diverse Multi-Branch Story Generation," EMNLP… | empirical | approximate | [core/creativity.md](core/creativity.md#avoidance-decoding) |
 | `bandura-1999` | Bandura, "Moral disengagement in the perpetration of inhumanities," *Personality and Soci… | theoretical | conceptual | [packs/origin-forge.md](packs/origin-forge.md#bandura-1999) |
 | `baumeister-1993` | Baumeister, Wotman & Stillwell, "Unrequited love: On heartbreak, anger, guilt, scriptless… | empirical | conceptual | [packs/romance.md](packs/romance.md#baumeister-1993) |
@@ -23,6 +26,7 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `brewer-lichtenstein-1982` | Brewer & Lichtenstein, "Stories Are to Entertain: A Structural-Affect Theory of Stories,"… | theoretical | conceptual | [core/reader-psychology.md](core/reader-psychology.md#brewer-lichtenstein-1982) |
 | `calvin-2021` | Kris Calvin, "Planting Clues: Red Herrings That Fool but Don't Frustrate Your Readers," *… | craft-practice | convention | [packs/mystery.md](packs/mystery.md#calvin-2021) |
 | `carroll-1990` | Noël Carroll, *The Philosophy of Horror, or Paradoxes of the Heart*, Routledge, 1990 | theoretical | conceptual | [packs/horror.md](packs/horror.md#carroll-1990) |
+| `caston-music-video-forms` | Emily Caston, “A short history of the British music video,” BFI, 2020-12-03 | historical-research | conceptual | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#caston-music-video-forms) |
 | `celtx-comic-script` | Celtx Blog, "How to Write a Comic Book Script." | craft-practice | convention | [packs/comic-panel-writer.md](packs/comic-panel-writer.md#celtx-comic-script) |
 | `clasen-2017` | Mathias Clasen, *Why Horror Seduces*, Oxford University Press, 2017 | theoretical | conceptual | [packs/horror.md](packs/horror.md#clasen-2017) |
 | `clasen-2020` | Clasen, Kjeldgaard-Christiansen & Johnson, "Horror, Personality, and Threat Simulation: A… | empirical | conceptual | [packs/horror.md](packs/horror.md#clasen-2020) |
@@ -51,6 +55,7 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `friedman-backstory` | Susan DeFreitas at Jane Friedman (site), "Backstory and Exposition: 4 Key Tactics" | craft-practice | convention | [core/page-craft.md](core/page-craft.md#friedman-backstory) |
 | `friedman-setup-payoff` | Jane Friedman (site), "Writing Scenes: Crafting the Setup and the Payoff" | craft-practice | convention | [core/page-craft.md](core/page-craft.md#friedman-setup-payoff) |
 | `friedman-show-tell` | Jane Friedman (site), "What Do We Really Mean When We Say 'Show, Don't Tell'?" | craft-practice | convention | [core/page-craft.md](core/page-craft.md#friedman-show-tell) |
+| `frost-prelude` | Harv Frost interview, “Prelude to Ecstasy,” Directors Notes, 2024-10-11 | director-interview | conceptual | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#frost-prelude) |
 | `genie` | Namuduri et al., "GENIE: A Fine-Grained Measure for Novelty," arXiv 2606.12790, 2026 (pre… | empirical | approximate | [core/creativity.md](core/creativity.md#genie) |
 | `gottman-1998` | Gottman, Coan, Carrère & Swanson, "Predicting Marital Happiness and Stability from Newlyw… | empirical | conceptual | [packs/romance.md](packs/romance.md#gottman-1998) |
 | `gottman-levenson-1992` | Gottman & Levenson, "Marital processes predictive of later dissolution," *JPSP* 63(2), 22… | empirical | conceptual | [packs/romance.md](packs/romance.md#gottman-levenson-1992) |
@@ -59,6 +64,9 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `hazan-shaver-1987` | Hazan & Shaver, "Romantic love conceptualized as an attachment process," *JPSP* 52(3), 51… | empirical | conceptual | [packs/romance.md](packs/romance.md#hazan-shaver-1987) |
 | `hoeken-vanvliet-2000` | Hoeken & van Vliet, "Suspense, curiosity, and surprise: How discourse structure influence… | empirical | conceptual | [packs/mystery.md](packs/mystery.md#hoeken-vanvliet-2000) |
 | `human-level-narratives` | Tian et al., "Are Large Language Models Capable of Generating Human-Level Narratives?," E… | empirical | conceptual | [core/planning-memory.md](core/planning-memory.md#human-level-narratives) |
+| `iad-claude-codex-merge` | Claude's draft of this pack and ChatGPT's critique and counter-proposal (gpt-5.6-sol thro… | pack-design | design | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#iad-claude-codex-merge) |
+| `iad-codex-plan-2026-11-23` | "Powers that change the story, and a faster comic format," a plan drafted by Claude, crit… | pack-design | design | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#iad-codex-plan-2026-11-23) |
+| `iad-owner-rulings` | Erik (skill owner), production rulings for an illustrated audio-drama series, 2026-11-20… | owner-ruling | design | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#iad-owner-rulings) |
 | `isayama-interview-2023` | Crunchyroll News, interview with Hajime Isayama, 2023-01-13 | creator-interview | conceptual | [packs/tragic-anime-engine.md](packs/tragic-anime-engine.md#isayama-interview-2023) |
 | `kamble-2014` | Jayashree Kamblé, *Making Meaning in Popular Romance Fiction: An Epistemology*, Palgrave… | genre-scholarship | conceptual | [packs/romance.md](packs/romance.md#kamble-2014) |
 | `katayama-interview-2019` | VIZ Blog, interview with *Jujutsu Kaisen* editor Tatsuhiko Katayama, 2019 | editor-interview | conceptual | [packs/tragic-anime-engine.md](packs/tragic-anime-engine.md#katayama-interview-2019) |
@@ -104,6 +112,8 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `regis-2003` | Pamela Regis, *A Natural History of the Romance Novel*, University of Pennsylvania Press,… | genre-scholarship | convention | [packs/romance.md](packs/romance.md#regis-2003) |
 | `rusbult-1983` | Rusbult, "A longitudinal test of the investment model," *JPSP* 45(1), 101–117, 1983 | empirical | conceptual | [packs/romance.md](packs/romance.md#rusbult-1983) |
 | `rwa-genre-definition` | Romance Writers of America, "The Romance Genre." | craft-practice | convention | [packs/romance.md](packs/romance.md#rwa-genre-definition) |
+| `schroder-pille` | Johannes Schröder interview, “Pille aus Luft,” Directors Notes, 2016-08-24 | director-interview | conceptual | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#schroder-pille) |
+| `screen-time-ledger` | AI Writer pack design, 2026-09-26, from the requested timed cinematic-script workflow | pack-design | design | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#screen-time-ledger) |
 | `scriptmag-setup-payoff` | Script Magazine, "Setup and Payoff" | craft-practice | convention | [core/page-craft.md](core/page-craft.md#scriptmag-setup-payoff) |
 | `scriptmag-subtext` | Script Magazine, "Dialogue Subtext: Say Without Saying" | craft-practice | convention | [core/page-craft.md](core/page-craft.md#scriptmag-subtext) |
 | `scrivner-2021` | Scrivner, Johnson, Kjeldgaard-Christiansen & Clasen, "Pandemic practice: Horror fans and… | empirical | conceptual | [packs/horror.md](packs/horror.md#scrivner-2021) |
@@ -118,6 +128,7 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `tobin-2018` | Vera Tobin, *Elements of Surprise: Our Mental Limits and the Satisfactions of Plot*, Harv… | theoretical | conceptual | [packs/mystery.md](packs/mystery.md#tobin-2018) |
 | `tobin-conversation-2018` | Vera Tobin, "The science of the plot twist – how writers exploit our brains," *The Conver… | theoretical | conceptual | [packs/mystery.md](packs/mystery.md#tobin-conversation-2018) |
 | `unr-psychic-distance` | University of Nevada, Reno Writing & Speaking Center, "Psychic Distance in Creative Writi… | craft-practice | convention | [core/page-craft.md](core/page-craft.md#unr-psychic-distance) |
+| `usberghi-sanctuary` | Stefano Usberghi interview, “Sanctuary,” Directors Notes, 2024-08-08 | director-interview | conceptual | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#usberghi-sanctuary) |
 | `va-moral-injury` | U.S. Department of Veterans Affairs, National Center for PTSD, "Moral Injury" (profession… | clinical-public-information | conceptual | [packs/origin-forge.md](packs/origin-forge.md#va-moral-injury) |
 | `van-dine-1928` | S. S. Van Dine, "Twenty Rules for Writing Detective Stories," *The American Magazine*, Se… | historical-primary | convention | [packs/mystery.md](packs/mystery.md#van-dine-1928) |
 | `van-laer-2014` | van Laer, de Ruyter, Visconti & Wetzels, "The Extended Transportation-Imagery Model: A Me… | empirical | conceptual | [core/reader-psychology.md](core/reader-psychology.md#van-laer-2014) |

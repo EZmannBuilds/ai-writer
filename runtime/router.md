@@ -13,7 +13,7 @@ route:
   state_source:    # workspace | context | none
   packs: []        # pack ids, in pipeline order
   core: []         # core module ids to load now
-  register:        # prose | comic_narrative | comic_page_map | comic_panel_breakdown | comic_full_script | plan | critique
+  register:        # illustrated_audio_script | screen_page_board | audio_visual_audit | screenplay | music_video_script | cinematic_treatment | prose | comic_narrative | comic_page_map | comic_panel_breakdown | comic_full_script | plan | critique
   ask_user: []     # only genuinely consequential forks; usually empty
   authority:       # guided | collaborative | autonomous  (who may make creative decisions)
 ```
@@ -60,7 +60,7 @@ user request
 ↓
 8. CORE MODULES           only those the current task needs (table below)
 ↓
-9. OUTPUT REGISTER        prose, or Comic Panel Writer
+9. OUTPUT REGISTER        prose, Comic Panel Writer, Cinematic Scene Writer, or Illustrated Audio Drama
 ↓
 10. STATE EXTRACTION      update project state; propose, never silently canonize
 ```
@@ -80,6 +80,8 @@ Steps 4–7 run once per project, not once per request. On a continuation, the r
 | `chapter_request` | A chapter or sequence of scenes in a known project. | drafting |
 | `story_request` | A complete short piece defined well enough to write now ("a bedtime story about a hedgehog who learns to share"). | drafting |
 | `origin` | How someone became a hero, villain, or other identity. "Start Origin", "villain origin". | seed or planning |
+| `screen_output` | Film scenes, screenplays, cinematic treatments or music-video scripts; excludes code scripts and reviews. | any |
+| `audio_drama_output` | "Audio Drama Mode", "Motion Comic Mode", a voiced episode shown as panels or a motion comic, "radio play with pictures". Stories that only mention radio or recordings don't count. | any |
 | `comic_output` | "Comic Mode", "panel this", "comic script", "page breakdown". | any |
 | `tragic_story` | "Start Tragic Story", "Dark Anime Mode", lethal consequence, ideological war, "make this devastating". | seed or planning |
 | `mystery` | A crime, puzzle, investigation, detective, "whodunit", "clues", "Start Mystery". | seed or planning |
@@ -158,7 +160,8 @@ genre        tragic-anime-engine · mystery · horror · romance   (any combinat
 scale        series-engine
 world        worldbuilding
 ─────────── Intent Lock → Story Genome ───────────
-output       comic-panel-writer
+output       comic-panel-writer, cinematic-scene-writer or illustrated-audio-drama (requested register)
+             illustrated-audio-drama may stack comic-panel-writer for drawability and page jobs
 ```
 
 Genre packs stack. When two genre packs disagree about an ending convention (Romance's default of an emotionally satisfying ending vs. Tragic's permanent cost), the conflict is settled in Intent Lock by the user's stated intent, not by pack order.
@@ -202,7 +205,7 @@ Load the smallest set that does the job. `●` = load; `○` = load if the reque
 | [research-mode](../core/research-mode.md) | ○ | ○ | ○ | ○ | ○ |
 | [question-bank](../core/question-bank.md) | ○ | ○ | ○ | ○ | ○ |
 
-**Pack drafting checks.** When drafting with packs active, each pack's drafting-time checks run at the critic step: Mystery's ledger check, Horror's audit, Romance's perception update, Tragic's residue check, Comic Panel Writer's production checks.
+**Pack drafting checks.** When drafting with packs active, each pack's drafting-time checks run at the critic step: Mystery's ledger check, Horror's audit, Romance's perception update, Tragic's residue check, Comic Panel Writer's production checks, Illustrated Audio Drama's self-check.
 
 **Conditional loads (○)**
 
@@ -223,6 +226,8 @@ Load the smallest set that does the job. `●` = load; `○` = load if the reque
 | Register | When |
 |---|---|
 | `prose` | Default. |
+| `screenplay` / `music_video_script` / `cinematic_treatment` | Cinematic Scene Writer active; choose the requested format. |
+| `illustrated_audio_script` / `screen_page_board` / `audio_visual_audit` | Illustrated Audio Drama active: the recordable radio play, the board timed to locked audio, or the self-check on existing work. Power signatures are `plan`. |
 | `comic_narrative` | Comic Panel Writer active, no pages or panels requested. |
 | `comic_page_map` / `comic_panel_breakdown` / `comic_full_script` | The user asked for pages, panels, or a script. |
 | `plan` | Planning requests: briefs, outlines, ledgers. |
@@ -287,6 +292,7 @@ Ask only when the answer would substantially change the work and context cannot 
 | "Start Origin: a decorated officer who becomes a villain. You decide the rest." | `origin` · seed · SHORT_STORY · authority autonomous · packs `[draft-starter, origin-forge]` · asks nothing |
 | "Dark Anime Mode. Build a tragic arc for my team." | `tragic_story` · planning · LONG_FORM · packs `[tragic-anime-engine]` (+ draft-starter only if no premise exists) |
 | "Continue chapter 12." (workspace present) | `continuation` · continuing · LONG_FORM · packs from `project.yaml` · core memory first |
+| "Audio Drama Mode: a ten-minute episode, voiced, shown as comic panels." | `audio_drama_output` · drafting · SHORT_STORY · packs `[illustrated-audio-drama]` (+ comic-panel-writer when boarding) · register illustrated_audio_script, then screen_page_board once audio is locked |
 | "Panel this page." | `comic_output` · drafting · FAST_SCENE · packs `[comic-panel-writer]` · register comic_panel_breakdown |
 
 Full walk-throughs: [tests/workflow-traces.md](../tests/workflow-traces.md).

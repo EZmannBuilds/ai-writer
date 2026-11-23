@@ -1,0 +1,16 @@
+id: F41
+title: Format and user intent outrank defaults
+covers:
+- packs/cinematic-scene-writer
+input:
+  request: Write a conventional two-character dialogue screenplay scene; no annotations,
+    timecodes or music.
+  context:
+    state: none
+expected:
+  behavior: &id001
+  - Uses scene heading, action and distinct dialogue.
+  - Does not add timing/meaning tables or demand a master audio file.
+failure:
+- Forces music-video paperwork into an ordinary screenplay scene.
+pass_criteria: *id001

@@ -1,0 +1,23 @@
+# AI Writer behavioral fixture. See tests/README.md.
+id: F46
+title: A headphone-only clue gets a fallback
+covers:
+- packs/illustrated-audio-drama
+input:
+  request: 'Audio Drama Mode. The only clue that the voice is fake is that on headphones it
+    comes from behind the listener. Write the beat.'
+  context:
+    state: none
+expected:
+  route:
+    task: audio_drama_output
+    mode: FAST_SCENE
+    packs:
+    - illustrated-audio-drama
+  behavior:
+  - Keeps the spatial effect but adds a mono-safe cue (a reaction, a closed mouth in the panel, wrong-way bubble tail, a vocal tell).
+  - Notes that phone speakers and mono lose the spatial cue.
+failure:
+- Leaves the binaural placement as the only evidence.
+pass_criteria:
+- The fake voice is identifiable on a phone speaker and with the sound off.

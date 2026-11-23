@@ -40,6 +40,7 @@ ai_writer_project:
 | `tragic_story_brief`, `hope_reserve`, `consequence_ledger`, `death_impact_card`, `power_cost_card`, `ensemble_pressure` | `pack_state.tragic-anime-engine.*` |
 | `reveal_ledger` (tragic), `clue_ledger` (mystery) | `pack_state.<pack>.*`, with each open item mirrored as an `open_loops` entry |
 | `comic_project`, `page` records | `pack_state.comic-panel-writer.*` |
+| `episode`, `power_signature`, `audio_visual_beat` | `pack_state.illustrated-audio-drama.*` (power mechanisms themselves live in `world`) |
 | `intent_lock` | `intent_lock` |
 | `story_genome` | `story_genome` |
 | `persona`, `developing_state` | `characters.<id>.persona`, `characters.<id>.developing_state` |

@@ -1,9 +1,9 @@
 ---
 name: ai-writer
-version: 0.7
+version: 0.9
 status: modular-runtime
 license: CC-BY-NC-4.0
-description: A research-informed fiction-writing system for psychologically deep, structurally coherent, distinctive fiction. Use for any fiction task — story ideas, scenes, chapters, novels, series, origins, comics, mysteries, horror, romance, tragic/dark stories, worldbuilding, continuation of an existing project, critique, and revision. Loads only the machinery a task needs; keeps canon, character knowledge, and agent proposals separate.
+description: A research-informed fiction-writing system for psychologically deep, structurally coherent, distinctive fiction. Use for any fiction task — story ideas, scenes, chapters, novels, series, origins, comics, mysteries, horror, romance, tragic/dark stories, worldbuilding, continuation of an existing project, film scenes, music-video scripts, illustrated audio dramas and motion comics, critique, and revision. Loads only the machinery a task needs; keeps canon, character knowledge, and agent proposals separate.
 ---
 
 # AI Writer
@@ -85,7 +85,7 @@ REQUEST
 ↓ planning packs, if they apply     identity → genre → scale → world
 ↓ lock intent, build genome         core/intent-lock.md · core/story-genome.md
 ↓ core modules the task needs       core/*
-↓ output register                   prose · packs/comic-panel-writer.md
+↓ output register                   prose · packs/comic-panel-writer.md · packs/cinematic-scene-writer.md · packs/illustrated-audio-drama.md
 ↓ extract state, with provenance    runtime/canon-resolver.md
 ```
 
@@ -127,6 +127,8 @@ Packs are optional add-ons. Each pack's front matter is its contract; the router
 | [romance](packs/romance.md) | genre | "Start Romance", "slow burn" | Per-partner perception, love dimensions, disclosure, barriers, endings that fit. |
 | [series-engine](packs/series-engine.md) | scale | "Start Series", "plan season 2" | Promise stacks, long threads, escalation beyond bigger villains, convergence. |
 | [worldbuilding](packs/worldbuilding.md) | world | "Build World" | Causal society design that lands on people as cost and conflict. |
+| [cinematic-scene-writer](packs/cinematic-scene-writer.md) | output | "Screenplay Mode", "Music Video Script" | Complete screen scenes, fixed-track timings and separate intention notes. |
+| [illustrated-audio-drama](packs/illustrated-audio-drama.md) | output | "Audio Drama Mode", "Motion Comic Mode" | Voiced episodes shown as motion comics: audio-first scripts, power signatures, boards timed to locked audio. |
 | [comic-panel-writer](packs/comic-panel-writer.md) | output | "Comic Mode", "Panel this" | Comic-book visual logic, or real page/panel scripts. |
 
 Writing a new pack: [docs/PACK_AUTHORING.md](docs/PACK_AUTHORING.md).

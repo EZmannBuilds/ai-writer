@@ -1,5 +1,34 @@
 # CHANGELOG
 
+## v0.9 - 2026-11-23
+
+Added the optional **Illustrated Audio Drama** output pack for voiced episodes shown as motion comics, with router integration, a research file and six behavioral fixtures (F42–F47). Added on Erik's explicit request, designed with ChatGPT (gpt-5.6-sol through the Codex CLI, read-only): Claude drafted, ChatGPT critiqued and counter-proposed, Claude merged, and Erik approved.
+
+- `packs/illustrated-audio-drama.md`. Contents:
+  - an episode contract with a default ten-minute beat map, or the same beat jobs on a custom shape;
+  - power signatures split into how the power works and how it shows, with the removal test and the mechanism test;
+  - an audio-first script format that is safe for a voice engine;
+  - a sequence-level show-don't-confess scan;
+  - screen-page boards timed to locked audio, with a shot plan that gives a reason for each shot and expressive layout that answers story pressure;
+  - lettering conventions by voice type;
+  - a self-check whose shot-variety, "too basic" and crowding counts are warnings, not gates.
+- The registers are `illustrated_audio_script`, `screen_page_board` and `audio_visual_audit`. The router gains the task type `audio_drama_output`.
+- `packs/comic-panel-writer.md` 1.2: a `motion_comic_16x9` format, a pointer to the new pack for timing, and the superpower check now covers changes to the comic language.
+- `runtime/project-state.md`: the new schemas are mapped. A power's mechanism is a `world` fact, and its signature points to it.
+- **Unchanged:** Cinematic Scene Writer, the genre packs, and canon and workspace behavior.
+- **What ChatGPT contributed:**
+  - the sequence-level confession test, which catches motivated briefings;
+  - the expanded mechanism schema, covering range, onset, recovery, evidence and counterplay;
+  - mono and small-speaker fallbacks;
+  - the job split between audio and picture, against "picture karaoke";
+  - turning fixed shot and layout rules into warnings;
+  - most of the failure rows and the fixture set.
+
+## v0.8 - 2026-09-26 10:03 PM CDT
+
+Added the optional Cinematic Scene Writer output pack for film and fixed-track music videos, seven consulted sources plus a labeled design entry, cue-evidence and scene-meaning separation, router integration, and six behavioral fixtures. Existing genres, canon and workspace behavior are unchanged. Added on Erik’s explicit request; research and prose authored by Codex.
+
+
 ## v0.7 — Mystery, Horror, Romance, Series, and Worldbuilding
 
 Added, each with a front-matter contract, research file, and fixtures:
