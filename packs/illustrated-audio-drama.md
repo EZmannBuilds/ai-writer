@@ -2,7 +2,7 @@
 pack:
   id: illustrated-audio-drama
   name: Illustrated Audio Drama
-  version: "1.0"
+  version: "1.1"
   stage: output
   pipeline_position: Drafting time, after scene design. Writes the radio play first, then boards pictures to the locked audio.
   purpose: Script voiced, illustrated episodes (audio drama shown as a motion comic) so that sound, picture, lettering and powers each carry story.
@@ -144,11 +144,15 @@ Write one card for each powered character before scripting their scenes. Two hal
 
 Comic-language transformations that work: a bubble tail pointing off-panel or at the wrong person; the power-user's lettering appearing inside a victim's bubble; the same panel repeated with one detail changed; gutters narrowing, cracking or breaking; sound lettering crossing panel borders; a page splitting or bending.
 
+**Growth.** Record the power's default, specific effects and how it can grow. A power may start narrow and later produce new effects, but each new effect branches from the power's type: it is a variation the type could plausibly produce, not an arbitrary new ability. Note what drives growth (training, emotion, strain, time) and which effects are already established in canon. [@iad-owner-rulings]
+
+**Intensity is set per episode.** How menacing, uncanny or out of control a character's power feels is an intent setting for this episode, not a constant. Keep every effect at or below that ceiling. A loss-of-control set piece is one possible escalation, not a requirement: an episode may hold it back for a later part, or leave it out. [@iad-owner-rulings]
+
 Triggers, warnings and weaknesses fit the character. An emotional trigger, a discoverable weakness and an audible tell are common, but a trained ability may have a tactical trigger, and a weakness may be a plain limit.
 
 **Removal test.** Delete every power effect from the script. If the plot is unchanged, the power failed. Each use should do at least one of: solve an immediate problem, create a worse one, reveal who the character is, force a choice. [@iad-codex-plan-2026-11-23]
 
-**Mechanism test.** For every use and every counter, check it against how the power works. Never derive a defence from the power's surface look. If a power acts on the *perception* of sound inside the brain, air does not move: earplugs and hearing aids do not block it, a microphone records nothing, and a deaf character may still "hear" it. Counterplay follows from transmission and targeting, for example line of sight, range, concentration, or the user's own cost. [@iad-owner-rulings]
+**Mechanism test.** For every use and every counter, check it against how the power works, including its growth rule: a new effect that doesn't branch from the power's type fails. Never derive a defence from the power's surface look. If a power acts on the *perception* of sound inside the brain, air does not move: earplugs and hearing aids do not block it, a microphone records nothing, and a deaf character may still "hear" it. Counterplay follows from transmission and targeting, for example line of sight, range, concentration, or the user's own cost. [@iad-owner-rulings]
 
 ### 3. The illustrated audio script
 
@@ -186,6 +190,14 @@ After the audio is locked, board it.
 - **Expressive layout answers pressure.** Angled gutters, splash pages, broken frames, insets and repeated-panel strips mark impact, revelation, power states and emotional rupture. A power's owned layout devices appear only when that power acts.
 - **Lettering is separate from art description**, so either can change without redoing the other.
 - **Panels hold as long as the audio, the lettering, comprehension and the intended emotional hold need.** If the picture exposes an action the listener can't follow, fix and re-lock the audio. Don't patch it with narration.
+- **Composition borrowed from manga** (its framing and pacing, not its drawing style). [@iad-manga-mapping]
+  - **Frame by how much the panel shows:** several characters, one character, less than one (a hand, an eye, an object), or no character, only the place. Comics corpora find manga gives far more of its panels to single characters than mainstream American comics do, individuating people and parts of a scene rather than showing the whole scene. Make one-character and detail panels the everyday default, and save group panels for when the relationship between people is the point. [@cohn-2012-framing]
+  - **Subjective panels** show what a character perceives. Manga uses them more, most often as close-ups and environment views. They suit powers: one panel shows what the victim perceives, the next shows what is actually there. [@cohn-2023-subjectivity]
+  - **Look around one moment.** Before a big beat, a short run of panels on different aspects of the same instant (the snow, an ear, a finger, a smile), held over one sustained sound, stops time. [@mccloud-transitions]
+  - **Silent beats (ma).** Panels segment time, and a wordless panel holds a pause. Write them as `SILENCE:` cues with a held image: after an important line, before a reveal, after a hit. [@natsume-panels] [@globalcomix-manga-paneling]
+  - **Every page change is a page turn.** On a screen, the last panel of a page can pose the question (a door, a look off-panel, a sound with no source) and the next page opens on the answer. Put the midpoint twist on one.
+  - **One focal panel per page**, sized by importance, with smaller panels feeding it; the camera holds longest there. Contrast in panel size and shape compresses and releases tension. Bleed to the frame edge for awe or shock; angled panels for speed and tension, straight ones for calm. [@globalcomix-manga-paneling] [@natsume-panels]
+  - **Decompress what matters.** Spend panels on the decisive moments; a journey can be one establishing panel and a sound cue.
 - **Shorts.** Optionally mark 30–60-second sequences that have their own setup, turn and button. Never bend the episode to make them.
 
 ### 6. Lettering by voice type
@@ -212,11 +224,12 @@ Crowding warnings for the screen, where the audio sets the pace: about 15 words 
 
 Run at the critic step and as the `audio_visual_audit` register.
 
-- **Removal test** and **mechanism test** for every power use and counter.
+- **Removal test** and **mechanism test** for every power use and counter, including growth.
+- **Intensity:** every power effect stays within this episode's ceiling; no escalation the episode didn't plan.
 - **Confession scan** with the five sequence questions.
 - **Screen-off check:** with eyes closed, can a listener follow who speaks, what happens, where and when?
 - **Picture adds:** does each page add evidence, space, reaction, irony or withheld information?
-- **Warnings, each to confirm or fix:** six similar talking-head shots in a row; a scene with no far shot or no close shot; three plain grids in a row with no size change ("too basic"); every page loud (expressive layout everywhere); a power device used by the wrong character; a clue that lives only in headphone audio; lettering crowding.
+- **Warnings, each to confirm or fix:** most panels in a scene are group shots; a tense scene with no detail panel; a scene with no silent beat; a page that ends without a question or a focal panel; six similar talking-head shots in a row; a scene with no far shot or no close shot; three plain grids in a row with no size change ("too basic"); every page loud (expressive layout everywhere); a power device used by the wrong character; a clue that lives only in headphone audio; lettering crowding.
 - **Budget:** spoken words against the runtime; voice count.
 - **Look:** the episode's look matches its lead; darkness is where the story calls for it.
 - **Contract:** the installment lands a consequence and settles its own question before any sting.
@@ -244,6 +257,9 @@ Run at the critic step and as the `audio_visual_audit` register.
 | Layout wallpaper | Cracks, diagonals and broken frames on every page | Reserve rupture for a defined pressure or power state |
 | Too basic | Page after page of equal rectangles and medium shots | Vary scale and panel size where the story turns; earn one bold page |
 | Spoken tags | The engine reads "[with mounting dread and sorrow]" aloud | One-to-three-word tags; move direction to the voice notes |
+| Whole-scene framing | Every panel shows everyone in the room | Isolate one person or one detail; keep group panels for relationship beats |
+| Random growth | A power suddenly does something unrelated to its type | Branch the new effect from the power's type, or cut it |
+| Unplanned escalation | Every episode ends with the power going out of control, or a character reads creepier than intended | Hold effects to this episode's intensity ceiling; save the set piece |
 | Cliffhanger without a landing | Part one stops mid-fight | Settle this part's question, land a consequence, then open the next |
 
 ## Schemas
@@ -262,6 +278,7 @@ pack_state:
         consequence_landed: null
         question_left_open: null
       audio_only_required: true
+      power_intensity: []           # per character: ceiling for this episode, escalation planned here or deferred
       visual_identity:
         lead_specific_look: null
         expressive_devices: []
@@ -291,6 +308,11 @@ power_signature:
     residual_evidence: []
     blocked_by: []
     not_blocked_by: []
+  growth:
+    default_effects: []             # the specific effects established now
+    power_type: null                # what new effects must branch from
+    emergent_effects: []            # later effects, each with the branch it grew from
+    growth_driver: null             # training | emotion | strain | time | other
   use_conditions:
     trigger: null
     cost: null                      # or a ref to the Tragic engine's power_cost_card
@@ -325,10 +347,13 @@ audio_visual_beat:
   page: null
   panel_function: null
   framing:
+    content: null                   # macro (several) | mono (one) | micro (less than one) | amorphic (place only)
+    subjective: false
     scale: null
     angle: null
     reason: null
   layout_device: null
+  page_role: null                   # focal | feeder | hook | answer | silent_beat
   lettering:
     items: []
     reading_order: []
@@ -391,7 +416,7 @@ Remove the power and the breach, the harm to the child and Ines's surrender all 
 
 ## Research provenance
 
-See [research/packs/illustrated-audio-drama.md](../research/packs/illustrated-audio-drama.md). The pack is a **design** module. Its rules come from a series owner's production rulings, a plan made with Codex and approved by the owner, and a Claude–ChatGPT collaboration that critiqued the first draft. No external studies were consulted. The beat map, word rate and crowding numbers are working targets, not tested laws.
+See [research/packs/illustrated-audio-drama.md](../research/packs/illustrated-audio-drama.md). The pack is mostly a **design** module. Its rules come from a series owner's production rulings, a plan made with Codex and approved by the owner, and a Claude–ChatGPT collaboration that critiqued the first draft. The manga composition section (1.1) adds two corpus studies of comics framing (empirical, read via the article and an abstract), a translated essay on panel function (conceptual), and craft summaries of manga paneling and McCloud's transitions (conventions). Those describe tendencies in printed comics, not rules for screen boards. The beat map, word rate and crowding numbers are working targets, not tested laws.
 
 ## Integration
 

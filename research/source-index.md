@@ -30,6 +30,8 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `celtx-comic-script` | Celtx Blog, "How to Write a Comic Book Script." | craft-practice | convention | [packs/comic-panel-writer.md](packs/comic-panel-writer.md#celtx-comic-script) |
 | `clasen-2017` | Mathias Clasen, *Why Horror Seduces*, Oxford University Press, 2017 | theoretical | conceptual | [packs/horror.md](packs/horror.md#clasen-2017) |
 | `clasen-2020` | Clasen, Kjeldgaard-Christiansen & Johnson, "Horror, Personality, and Threat Simulation: A… | empirical | conceptual | [packs/horror.md](packs/horror.md#clasen-2020) |
+| `cohn-2012-framing` | Neil Cohn, Amaro Taylor-Weiner and Suzanne Grossman, "Framing Attention in Japanese and A… | empirical | approximate | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#cohn-2012-framing) |
+| `cohn-2023-subjectivity` | Neil Cohn, Irmak Hacımusaoğlu and Bien Klomberg, "The framing of subjectivity: Point-of-v… | empirical | approximate | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#cohn-2023-subjectivity) |
 | `comics-experience-archive` | Comics Experience, professional script archive; Greg Pak comic script template.  | craft-practice | convention | [packs/comic-panel-writer.md](packs/comic-panel-writer.md#comics-experience-archive) |
 | `create` | Wadhwa et al., "CREATE: Testing LLMs for Associative Creativity," arXiv 2603.09970, 2026… | empirical | conceptual | [core/creativity.md](core/creativity.md#create) |
 | `critics` | Bae & Kim, "Collective Critics for Creative Story Generation," EMNLP 2024 | empirical | approximate | [core/critique-evaluation.md](core/critique-evaluation.md#critics) |
@@ -57,6 +59,7 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `friedman-show-tell` | Jane Friedman (site), "What Do We Really Mean When We Say 'Show, Don't Tell'?" | craft-practice | convention | [core/page-craft.md](core/page-craft.md#friedman-show-tell) |
 | `frost-prelude` | Harv Frost interview, “Prelude to Ecstasy,” Directors Notes, 2024-10-11 | director-interview | conceptual | [packs/cinematic-scene-writer.md](packs/cinematic-scene-writer.md#frost-prelude) |
 | `genie` | Namuduri et al., "GENIE: A Fine-Grained Measure for Novelty," arXiv 2606.12790, 2026 (pre… | empirical | approximate | [core/creativity.md](core/creativity.md#genie) |
+| `globalcomix-manga-paneling` | ArtCrumbs and the GlobalComix Team, "Creator Tips and Tricks #10: More tips for Paneling… | craft-practice | convention | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#globalcomix-manga-paneling) |
 | `gottman-1998` | Gottman, Coan, Carrère & Swanson, "Predicting Marital Happiness and Stability from Newlyw… | empirical | conceptual | [packs/romance.md](packs/romance.md#gottman-1998) |
 | `gottman-levenson-1992` | Gottman & Levenson, "Marital processes predictive of later dissolution," *JPSP* 63(2), 22… | empirical | conceptual | [packs/romance.md](packs/romance.md#gottman-levenson-1992) |
 | `green-brock-2000` | Green & Brock, "The Role of Transportation in the Persuasiveness of Public Narratives," *… | empirical | conceptual | [core/reader-psychology.md](core/reader-psychology.md#green-brock-2000) |
@@ -66,6 +69,7 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `human-level-narratives` | Tian et al., "Are Large Language Models Capable of Generating Human-Level Narratives?," E… | empirical | conceptual | [core/planning-memory.md](core/planning-memory.md#human-level-narratives) |
 | `iad-claude-codex-merge` | Claude's draft of this pack and ChatGPT's critique and counter-proposal (gpt-5.6-sol thro… | pack-design | design | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#iad-claude-codex-merge) |
 | `iad-codex-plan-2026-11-23` | "Powers that change the story, and a faster comic format," a plan drafted by Claude, crit… | pack-design | design | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#iad-codex-plan-2026-11-23) |
+| `iad-manga-mapping` | "Manga composition for our motion comics," a research note by the owner's lore session (C… | pack-design | design | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#iad-manga-mapping) |
 | `iad-owner-rulings` | Erik (skill owner), production rulings for an illustrated audio-drama series, 2026-11-20… | owner-ruling | design | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#iad-owner-rulings) |
 | `isayama-interview-2023` | Crunchyroll News, interview with Hajime Isayama, 2023-01-13 | creator-interview | conceptual | [packs/tragic-anime-engine.md](packs/tragic-anime-engine.md#isayama-interview-2023) |
 | `kamble-2014` | Jayashree Kamblé, *Making Meaning in Popular Romance Fiction: An Epistemology*, Palgrave… | genre-scholarship | conceptual | [packs/romance.md](packs/romance.md#kamble-2014) |
@@ -85,11 +89,13 @@ Cite a source inline as `[@key]`. `scripts/validate.py` fails on any key that is
 | `lovecraft-1927` | H. P. Lovecraft, "Supernatural Horror in Literature," 1927 (revised later) | historical-primary | convention | [packs/horror.md](packs/horror.md#lovecraft-1927) |
 | `martin-2019` | G. Neil Martin, "(Why) Do You Like Scary Movies? A Review of the Empirical Research on Ps… | empirical | conceptual | [packs/horror.md](packs/horror.md#martin-2019) |
 | `masterclass-dialogue` | MasterClass, "How to Write Script Dialogue" | craft-practice | convention | [core/page-craft.md](core/page-craft.md#masterclass-dialogue) |
+| `mccloud-transitions` | MediaSmarts, "Expression and storytelling in comics" (undated), summarizing Scott McCloud… | craft-practice | convention | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#mccloud-transitions) |
 | `mikulincer-shaver-2003` | Mikulincer & Shaver, "The Attachment Behavioral System in Adulthood," *Advances in Experi… | theoretical | conceptual | [packs/romance.md](packs/romance.md#mikulincer-shaver-2003) |
 | `mori-1970` | Masahiro Mori, "The Uncanny Valley," 1970; authorized English translation by MacDorman &… | theoretical | conceptual | [packs/horror.md](packs/horror.md#mori-1970) |
 | `murray-1996` | Murray, Holmes & Griffin, "The self-fulfilling nature of positive illusions in romantic r… | empirical | conceptual | [packs/romance.md](packs/romance.md#murray-1996) |
 | `narrative-identity-reviews` | Dunlop et al., 2020 (PubMed 33023390), and a narrative-identity review (PMC4395856), as l… | empirical | conceptual | [packs/origin-forge.md](packs/origin-forge.md#narrative-identity-reviews) |
 | `narrative-surprise` | Bissell, Paulin & Piper, "A Theoretical Framework for Evaluating Narrative Surprise in La… | empirical | conceptual | [core/reader-psychology.md](core/reader-psychology.md#narrative-surprise) |
+| `natsume-panels` | Natsume Fusanosuke, "The Functions of Panels (koma) in Manga," translated by Jon Holt and… | theoretical | conceptual | [packs/illustrated-audio-drama.md](packs/illustrated-audio-drama.md#natsume-panels) |
 | `netflix-devilman` | Netflix, *Devilman Crybaby* title page | official-description | conceptual | [packs/tragic-anime-engine.md](packs/tragic-anime-engine.md#netflix-devilman) |
 | `netflix-edgerunners` | Netflix Media Center and title page, *Cyberpunk: Edgerunners*.  | official-description | conceptual | [packs/tragic-anime-engine.md](packs/tragic-anime-engine.md#netflix-edgerunners) |
 | `netflix-violet-evergarden` | Netflix, *Violet Evergarden* title page | official-description | conceptual | [packs/tragic-anime-engine.md](packs/tragic-anime-engine.md#netflix-violet-evergarden) |

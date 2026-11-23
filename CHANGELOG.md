@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v0.9.1 - 2026-11-23
+
+Illustrated Audio Drama 1.1, approved by Erik:
+
+- **Manga composition, not the manga look.**
+  - Framing by how much a panel shows (several characters, one, a detail, or only the place), with one-character and detail panels as the default.
+  - Point-of-view panels for perception.
+  - Look-around runs that stop time.
+  - Silent beats written as silence cues.
+  - Every page change works as a page turn, with one focal panel per page.
+  - New warnings for whole-scene framing, missing silent beats and pages that end flat.
+- **Powers.** A growth rule: new effects branch from the power's type. A per-episode intensity ceiling, and a loss-of-control escalation is optional and can be saved for a later part.
+- **Research.** Six new entries: two of Cohn's corpus studies, Natsume's essay on panels, a GlobalComix paneling article, a McCloud summary, and the lore session's mapping note. The note's manga percentages were corrected against the source. Source research was gathered by Erik's lore session.
+
 ## v0.9 - 2026-11-23
 
 Added the optional **Illustrated Audio Drama** output pack for voiced episodes shown as motion comics, with router integration, a research file and six behavioral fixtures (F42–F47). Added on Erik's explicit request, designed with ChatGPT (gpt-5.6-sol through the Codex CLI, read-only): Claude drafted, ChatGPT critiqued and counter-proposed, Claude merged, and Erik approved.
